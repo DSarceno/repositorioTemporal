@@ -1,0 +1,4166 @@
+{
+    "tables": [
+     {
+      "supportsApplyEditsWithGlobalIds": true,
+      "maxRecordCount": 5000,
+      "attachmentProperties": [
+       {
+        "fieldName": "attachmentid",
+        "isEnabled": true,
+        "name": "id"
+       },
+       {
+        "fieldName": "globalid",
+        "isEnabled": true,
+        "name": "globalId"
+       },
+       {
+        "fieldName": "att_name",
+        "isEnabled": true,
+        "name": "name"
+       },
+       {
+        "fieldName": "data_size",
+        "isEnabled": true,
+        "name": "size"
+       },
+       {
+        "fieldName": "content_type",
+        "isEnabled": true,
+        "name": "contentType"
+       },
+       {
+        "fieldName": "keywords",
+        "isEnabled": true,
+        "name": "keywords"
+       },
+       {
+        "fieldName": "exifinfo",
+        "isEnabled": true,
+        "name": "exifInfo"
+       }
+      ],
+      "attachmentFields": [
+       {
+        "sqlType": "sqlTypeInteger",
+        "nullable": false,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "attachmentid",
+        "alias": "attachmentid",
+        "type": "esriFieldTypeOID",
+        "sqlTypeCode": 4
+       },
+       {
+        "sqlType": "sqlTypeVarchar",
+        "nullable": false,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "length": 38,
+        "name": "globalid",
+        "alias": "globalid",
+        "type": "esriFieldTypeGlobalID",
+        "sqlTypeCode": 12
+       },
+       {
+        "sqlType": "sqlTypeVarchar",
+        "nullable": false,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "length": 250,
+        "name": "att_name",
+        "alias": "att_name",
+        "type": "esriFieldTypeString",
+        "sqlTypeCode": 12
+       },
+       {
+        "sqlType": "sqlTypeInteger",
+        "nullable": false,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "data_size",
+        "alias": "data_size",
+        "type": "esriFieldTypeInteger",
+        "sqlTypeCode": 4
+       },
+       {
+        "sqlType": "sqlTypeVarchar",
+        "nullable": false,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "length": 150,
+        "name": "content_type",
+        "alias": "content_type",
+        "type": "esriFieldTypeString",
+        "sqlTypeCode": 12
+       },
+       {
+        "sqlType": "sqlTypeVarchar",
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "length": 2048,
+        "name": "keywords",
+        "alias": "keywords",
+        "type": "esriFieldTypeString",
+        "sqlTypeCode": 12
+       },
+       {
+        "sqlType": "sqlTypeVarchar",
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "length": 1073741822,
+        "name": "exifinfo",
+        "alias": "exifinfo",
+        "type": "esriFieldTypeString",
+        "sqlTypeCode": 12
+       }
+      ],
+      "infoInEstimates": [
+       "extent",
+       "count"
+      ],
+      "type": "Table",
+      "syncEnabled": true,
+      "supportsAttachmentsByUploadId": true,
+      "relationships": [
+       {
+        "keyField": "parentglobalid",
+        "role": "esriRelRoleDestination",
+        "composite": true,
+        "name": "Registro_y_Monitoreo_de_Fuentes_de_Agua_monitoreos",
+        "relatedTableId": 0,
+        "id": 1,
+        "cardinality": "esriRelCardinalityOneToMany"
+       }
+      ],
+      "hasViews": true,
+      "supportsAttachmentsResizing": true,
+      "id": 2,
+      "supportsStatistics": true,
+      "supportedExportFormats": "sqlite,filegdb",
+      "standardMaxRecordCount": 16000,
+      "isDataVersioned": false,
+      "templates": [],
+      "supportsAdvancedQueries": true,
+      "currentVersion": 10.91,
+      "advancedEditingCapabilities": {
+       "supportsAsyncApplyEdits": false,
+       "supportedSqlFormatsInCalculate": [
+        "standard"
+       ]
+      },
+      "objectIdField": "objectid",
+      "supportsQuantizationEditMode": true,
+      "name": "monitoreos",
+      "displayField": "objectid",
+      "supportsCalculate": true,
+      "fields": [
+       {
+        "nullable": false,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "objectid",
+        "length": 4,
+        "alias": "ObjectID",
+        "type": "esriFieldTypeOID"
+       },
+       {
+        "nullable": false,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "globalid",
+        "length": 38,
+        "alias": "GlobalID",
+        "type": "esriFieldTypeGlobalID"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "fecha_monitoreo",
+        "length": 29,
+        "alias": "Fecha de monitoreo",
+        "type": "esriFieldTypeDate"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_cobertura_forestal",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "si",
+           "name": "Si"
+          },
+          {
+           "code": "no",
+           "name": "No"
+          }
+         ]
+        },
+        "name": "cobertura_forestal",
+        "length": 255,
+        "alias": "Cobertura forestal",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "caudal",
+        "alias": "Caudal",
+        "type": "esriFieldTypeDouble"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "observaciones",
+        "length": 255,
+        "alias": "Observaciones",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "nombre_responsable",
+        "length": 255,
+        "alias": "Nombre completo",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_direccion_reg",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "gerencia",
+           "name": "GERENCIA"
+          },
+          {
+           "code": "subgerencia",
+           "name": "SUBGERENCIA"
+          },
+          {
+           "code": "administrativa_financiera",
+           "name": "ADMINISTRATIVA Y FINANCIERA"
+          },
+          {
+           "code": "coordinacion_tecnica_nacional",
+           "name": "COORDINACIÓN TÉCNICA NACIONAL"
+          },
+          {
+           "code": "cooperacion_sectorial",
+           "name": "COORDINACIÓN Y COOPERACIÓN SECTORIAL"
+          },
+          {
+           "code": "desarrollo_forestal",
+           "name": "DESARROLLO FORESTAL"
+          },
+          {
+           "code": "industria_comercio_forestal",
+           "name": "INDUSTRIA Y COMERCIO FORESTAL"
+          },
+          {
+           "code": "manejo_restauracion",
+           "name": "MANEJO Y RESTAURACIÓN DE BOSQUES"
+          },
+          {
+           "code": "planificacion_evaluacion_segui",
+           "name": "PLANIFICACIÓN, EVALUACIÓN Y SEGUIMIENTO INSTITUCIONAL"
+          },
+          {
+           "code": "recursos_humanos",
+           "name": "RECURSOS HUMANOS, DESARROLLO INSTITUCIONAL Y FORMACIÓN DE PERSONAL"
+          },
+          {
+           "code": "asuntos_juridicos",
+           "name": "ASUNTOS JURÍDICOS"
+          },
+          {
+           "code": "auditoria_interna",
+           "name": "AUDITORIA INTERNA"
+          },
+          {
+           "code": "comunicacion_social",
+           "name": "COMUNICACIÓN SOCIAL"
+          },
+          {
+           "code": "tics",
+           "name": "TECNOLOGÍAS DE LA INFORMACIÓN Y COMUNICACIÓN"
+          },
+          {
+           "code": "i",
+           "name": "I METROPOLITANA"
+          },
+          {
+           "code": "ii",
+           "name": "II LAS VERAPACES"
+          },
+          {
+           "code": "iii",
+           "name": "III NOR ORIENTE"
+          },
+          {
+           "code": "iv",
+           "name": "IV SUR ORIENTE"
+          },
+          {
+           "code": "v",
+           "name": "V CENTRAL"
+          },
+          {
+           "code": "vi",
+           "name": "VI SUR OCCIDENTE"
+          },
+          {
+           "code": "vii",
+           "name": "VII NOR OCCIDENTE"
+          },
+          {
+           "code": "viii",
+           "name": "VIII PETÉN"
+          },
+          {
+           "code": "ix",
+           "name": "IX COSTA SUR"
+          }
+         ]
+        },
+        "name": "direccion_reg",
+        "length": 255,
+        "alias": "Dirección, Región o Unidad",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_departamento_subreg",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "administrativo",
+           "name": "ADMINISTRATIVO"
+          },
+          {
+           "code": "compras",
+           "name": "COMPRAS"
+          },
+          {
+           "code": "contabilidad",
+           "name": "CONTABILIDAD"
+          },
+          {
+           "code": "financiero",
+           "name": "FINANCIERO"
+          },
+          {
+           "code": "fondo_rotativo_institucional",
+           "name": "FONDO ROTATIVO INSTITUCIONAL"
+          },
+          {
+           "code": "inventarios",
+           "name": "INVENTARIOS"
+          },
+          {
+           "code": "presupuesto",
+           "name": "PRESUPUESTO"
+          },
+          {
+           "code": "tesoreria",
+           "name": "TESORERÍA"
+          },
+          {
+           "code": "analisis_planificacion_sectorial",
+           "name": "ANÁLISIS Y PLANIFICACIÓN SECTORIAL"
+          },
+          {
+           "code": "cambio_climatico",
+           "name": "CAMBIO CLIMÁTICO"
+          },
+          {
+           "code": "cooperacion_externa",
+           "name": "COOPERACIÓN EXTERNA Y PREINVERSIÓN FORESTAL"
+          },
+          {
+           "code": "gobernanza_forestal",
+           "name": "GOBERNANZA FORESTAL"
+          },
+          {
+           "code": "coordinacion_tecnica_nacional",
+           "name": "COORDINACIÓN TÉCNICA NACIONAL"
+          },
+          {
+           "code": "monitoreo_y_obligaciones",
+           "name": "MONITOREO FORESTAL Y OBLIGACIONES DE REPOBLACIÓN FORESTAL"
+          },
+          {
+           "code": "coordinacion_pre",
+           "name": "COORDINACIÓN DEL PROGRAMA DE REDUCCIÓN DE EMISIONES"
+          },
+          {
+           "code": "pinpep",
+           "name": "COORDINACIÓN DE PINPEP"
+          },
+          {
+           "code": "probosque",
+           "name": "COORDINACIÓN DE PROBOSQUE"
+          },
+          {
+           "code": "fortalecimiento_forestal",
+           "name": "FORTALECIMIENTO FORESTAL, MUNICIPAL, COMUNAL Y SOCIAL"
+          },
+          {
+           "code": "investigacion_forestal",
+           "name": "INVESTIGACIÓN FORESTAL"
+          },
+          {
+           "code": "comercio_forestal",
+           "name": "COMERCIO FORESTAL"
+          },
+          {
+           "code": "industria_forestal",
+           "name": "INDUSTRIA FORESTAL"
+          },
+          {
+           "code": "mecanismos_financieros",
+           "name": "MECANISMOS FINANCIEROS"
+          },
+          {
+           "code": "monitoreo_empresas_forestales",
+           "name": "MONITOREO DE EMPRESAS FORESTALES"
+          },
+          {
+           "code": "conservacion_de_ecosistemas",
+           "name": "CONSERVACIÓN DE ECOSISTEMAS FORESTALES ESTRATÉGICOS"
+          },
+          {
+           "code": "manejo_de_bosques_naturales",
+           "name": "MANEJO DE BOSQUES NATURALES"
+          },
+          {
+           "code": "proteccion_forestal",
+           "name": "PROTECCIÓN FORESTAL"
+          },
+          {
+           "code": "restauracion_forestal",
+           "name": "RESTAURACIÓN FORESTAL"
+          },
+          {
+           "code": "semillas_y_recursos_geneticos",
+           "name": "SEMILLAS Y RECURSOS GENÉTICOS FORESTALES"
+          },
+          {
+           "code": "silvicultura",
+           "name": "SILVICULTURA Y EXTENSIÓN FORESTAL"
+          },
+          {
+           "code": "evaluacion_y_seguimiento",
+           "name": "EVALUACIÓN Y SEGUIMIENTO INSTITUCIONAL"
+          },
+          {
+           "code": "gestion_de_la_calidad",
+           "name": "GESTIÓN DE LA CALIDAD"
+          },
+          {
+           "code": "planificacion_institucional",
+           "name": "PLANIFICACIÓN INSTITUCIONAL"
+          },
+          {
+           "code": "registro_nacional_forestal",
+           "name": "REGISTRO NACIONAL FORESTAL"
+          },
+          {
+           "code": "sistemas_informacion_geografica",
+           "name": "SISTEMAS DE INFORMACIÓN GEOGRÁFICA"
+          },
+          {
+           "code": "acciones_de_personal",
+           "name": "ACCIONES DE PERSONAL"
+          },
+          {
+           "code": "desarrollo_institucional",
+           "name": "DESARROLLO INSTITUCIONAL"
+          },
+          {
+           "code": "formacion_de_personal",
+           "name": "FORMACIÓN Y CAPACITACIÓN"
+          },
+          {
+           "code": "nominas",
+           "name": "NOMINAS"
+          },
+          {
+           "code": "recursos_humanos",
+           "name": "RECURSOS HUMANOS"
+          },
+          {
+           "code": "parque_nacional_laguna_lachua",
+           "name": "PARQUE NACIONAL LAGUNA LACHUÁ"
+          },
+          {
+           "code": "parque_nacional_las_victorias",
+           "name": "PARQUE NACIONAL LAS VICTORIAS"
+          },
+          {
+           "code": "finca_nacional_san_jeronimo",
+           "name": "FINCA NACIONAL SAN JERÓNIMO"
+          },
+          {
+           "code": "parque_nacional_laguna_el_pino",
+           "name": "PARQUE NACIONAL LAGUNA EL PINO"
+          },
+          {
+           "code": "parque_nacional_el_rosario",
+           "name": "PARQUE NACIONAL EL ROSARIO"
+          },
+          {
+           "code": "i_1",
+           "name": "I-1 METROPOLITANA"
+          },
+          {
+           "code": "ii_1",
+           "name": "II-1 TACTIC"
+          },
+          {
+           "code": "ii_2",
+           "name": "II-2 RABINAL"
+          },
+          {
+           "code": "ii_3",
+           "name": "II-3 COBAN"
+          },
+          {
+           "code": "ii_4",
+           "name": "II-4 SAN JERONIMO"
+          },
+          {
+           "code": "ii_5",
+           "name": "II-5 FRAY BARTOLOME DE LAS CASAS"
+          },
+          {
+           "code": "ii_6",
+           "name": "II-6 IXCAN"
+          },
+          {
+           "code": "ii_7",
+           "name": "II-7 SANTA CATALINA LA TINTA"
+          },
+          {
+           "code": "iii_1",
+           "name": "III-1 IZABAL"
+          },
+          {
+           "code": "iii_2",
+           "name": "III-2 ZACAPA"
+          },
+          {
+           "code": "iii_3",
+           "name": "III-3 CHIQUIMULA"
+          },
+          {
+           "code": "iii_4",
+           "name": "III-4 EL PROGRESO"
+          },
+          {
+           "code": "iv_1",
+           "name": "IV-1 JALAPA"
+          },
+          {
+           "code": "iv_2",
+           "name": "IV-2 SANTA ROSA"
+          },
+          {
+           "code": "iv_3",
+           "name": "IV-3 JUTIAPA"
+          },
+          {
+           "code": "v_1",
+           "name": "V-1 ANTIGUA GUATEMALA"
+          },
+          {
+           "code": "v_2",
+           "name": "V-2 CHIMALTENANGO"
+          },
+          {
+           "code": "vi_1",
+           "name": "VI-1 QUETZALTENANGO"
+          },
+          {
+           "code": "vi_2",
+           "name": "VI-2 SAN MARCOS"
+          },
+          {
+           "code": "vi_3",
+           "name": "VI-3 TOTONICAPAN"
+          },
+          {
+           "code": "vi_4",
+           "name": "VI-4 SOLOLÁ"
+          },
+          {
+           "code": "vi_5",
+           "name": "VI-5 TEJUTLA"
+          },
+          {
+           "code": "vii_1",
+           "name": "VII-1 SANTA CRUZ DEL QUICHÉ"
+          },
+          {
+           "code": "vii_2",
+           "name": "VII-2 HUEHUETENANGO"
+          },
+          {
+           "code": "vii_3",
+           "name": "VII-3 NEBAJ"
+          },
+          {
+           "code": "vii_4",
+           "name": "VII-4 SOLOMA"
+          },
+          {
+           "code": "vii_5",
+           "name": "VII-5 SANTA ANA HUISTA"
+          },
+          {
+           "code": "viii_1",
+           "name": "VIII-1 SAN FRANCISCO"
+          },
+          {
+           "code": "viii_2",
+           "name": "VIII-2 POPTÚN"
+          },
+          {
+           "code": "viii_3",
+           "name": "VIII-3 SAYAXCHÉ"
+          },
+          {
+           "code": "viii_4",
+           "name": "VIII-4 LA LIBERTAD"
+          },
+          {
+           "code": "ix_1",
+           "name": "IX-1 SUCHITEPEQUEZ"
+          },
+          {
+           "code": "ix_2",
+           "name": "IX-2 ESCUINTLA"
+          },
+          {
+           "code": "ix_3",
+           "name": "IX-3 RETALHULEU"
+          },
+          {
+           "code": "ix_4",
+           "name": "IX-4 COATEPEQUE"
+          },
+          {
+           "code": "n_a",
+           "name": "N/A"
+          }
+         ]
+        },
+        "name": "departamento_subreg",
+        "length": 255,
+        "alias": "Departamento, Subregión o Sección",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_puesto",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "administrador_base_de_datos_de_pinpep",
+           "name": "Administrador (a) Base de Datos de PINPEP"
+          },
+          {
+           "code": "administrador_base_de_datos_de_probosque",
+           "name": "Administrador (a) Base de Datos de PROBOSQUE"
+          },
+          {
+           "code": "administrador_ii_de_la_finca_nacional_san_jeronimo",
+           "name": "Administrador (a) de la Finca Nacional San Jerónimo"
+          },
+          {
+           "code": "administrador_del_almacen",
+           "name": "Administrador (a) del Almacén"
+          },
+          {
+           "code": "administrador_i_del_parque_nacional_el_rosario",
+           "name": "Administrador (a) del Parque Nacional El Rosario"
+          },
+          {
+           "code": "administrador_iii_del_parque_nacional_laguna_el_pino",
+           "name": "Administrador (a) del Parque Nacional Laguna El Pino"
+          },
+          {
+           "code": "administrador_iv_del_parque_nacional_laguna_lachua",
+           "name": "Administrador (a) del Parque Nacional Laguna Lachuá"
+          },
+          {
+           "code": "administrador_ii_del_parque_las_victorias",
+           "name": "Administrador (a) del Parque Nacional Las Victorias"
+          },
+          {
+           "code": "analista_de_manejo_de_bosques_de_coniferas_y_mixtos",
+           "name": "Analista de Manejo de Bosques de Coniferas y Mixtos"
+          },
+          {
+           "code": "analista_de_mecanismos_financieros",
+           "name": "Analista de Mecanismos Financieros"
+          },
+          {
+           "code": "analista_de_ventanilla_ágil_para_las_importaciones",
+           "name": "Analista de Ventanilla Ágil para las Importaciones"
+          },
+          {
+           "code": "analista_tecnico_de_comercio_forestal",
+           "name": "Analista Técnico (a) de Comercio Forestal"
+          },
+          {
+           "code": "analista_tecnico_de_industria_forestal",
+           "name": "Analista Técnico (a) de Industria Forestal"
+          },
+          {
+           "code": "asesor_juridico_jd",
+           "name": "Asesor (a) Jurídico (a) de Junta Directiva"
+          },
+          {
+           "code": "asistente_de_gerencia",
+           "name": "Asistente de Gerencia"
+          },
+          {
+           "code": "asistente_de_subgerencia",
+           "name": "Asistente de Subgerencia"
+          },
+          {
+           "code": "auditor_i",
+           "name": "Auditor I"
+          },
+          {
+           "code": "auditor_ii",
+           "name": "Auditor II"
+          },
+          {
+           "code": "auxiliar_administrativo_regional",
+           "name": "Auxiliar Administrativo (a) Regional"
+          },
+          {
+           "code": "auxiliar_administrativo_pre",
+           "name": "Auxiliar Administrativo de Reducción de Emisiones"
+          },
+          {
+           "code": "auxiliar_de_archivo_y_catalogacion",
+           "name": "Auxiliar de Archivo y Catalogación"
+          },
+          {
+           "code": "auxiliar_de_diseño",
+           "name": "Auxiliar de Diseño"
+          },
+          {
+           "code": "coordinador_de_juridico",
+           "name": "Coordinador (a) de Asuntos Jurídicos"
+          },
+          {
+           "code": "coordinador_de_auditoria",
+           "name": "Coordinador (a) de Auditoría"
+          },
+          {
+           "code": "coordinador_de_programa_de_incentivos_forestales_pinpep",
+           "name": "Coordinador (a) de Programa de Incentivos Forestales PINPEP"
+          },
+          {
+           "code": "coordinador_de_programa_de_incentivos_forestales_probosque",
+           "name": "Coordinador (a) de Programa de Incentivos Forestales PROBOSQUE"
+          },
+          {
+           "code": "coordinador_del_pre",
+           "name": "Coordinador (a) del Programa Reducción de Emisiones"
+          },
+          {
+           "code": "coordinador_tecnico_del_pre",
+           "name": "Coordinador (a) Técnico (a) de Reducción de Emisiones"
+          },
+          {
+           "code": "coordinador_tecnico_nacional",
+           "name": "Coordinador (a) Técnico (a) Nacional"
+          },
+          {
+           "code": "coordinador_tecnico_regional",
+           "name": "Coordinador (a) Técnico (a) Regional"
+          },
+          {
+           "code": "delegado_administrativo",
+           "name": "Delegado (a) Administrativo (a)"
+          },
+          {
+           "code": "delegado_administrativo_pre",
+           "name": "Delegado (a) Administrativo (a) de Reducción de Emisiones"
+          },
+          {
+           "code": "delegado_de_divulgacion_y_comunicacion_social",
+           "name": "Delegado (a) de Divulgación y Comunicación Social"
+          },
+          {
+           "code": "delegado_de_fortalecimiento_forestal_municipal_comunal_y_social",
+           "name": "Delegado (a) de Fortalecimiento Forestal, Municipal, Comunal y Social"
+          },
+          {
+           "code": "delegado_de_incentivos_forestales",
+           "name": "Delegado (a) de Incentivos Forestales"
+          },
+          {
+           "code": "delegado_de_incentivos_proteccion_silv",
+           "name": "Delegado (a) de Incentivos Forestales, Protección Forestal y Silvicultura"
+          },
+          {
+           "code": "delegado_de_industrias_y_comercio",
+           "name": "Delegado (a) de Industrias y Comercio"
+          },
+          {
+           "code": "delegado_del_inab_ante_vupe",
+           "name": "Delegado (a) del INAB ante VUPE"
+          },
+          {
+           "code": "delegado_inab_anacafe",
+           "name": "Delegado (a) INAB-ANACAFÉ"
+          },
+          {
+           "code": "delegado_juridico",
+           "name": "Delegado (a) Jurídico (a)"
+          },
+          {
+           "code": "director_administrativo_y_financiero",
+           "name": "Director (a) Administrativo (a) y Financiero (a)"
+          },
+          {
+           "code": "director_de_coordinacion_y_cooperacion_sectorial",
+           "name": "Director (a) de Coordinación y Cooperación Sectorial"
+          },
+          {
+           "code": "director_de_desarrollo_forestal",
+           "name": "Director (a) de Desarrollo Forestal"
+          },
+          {
+           "code": "director_de_industria_y_comercio_forestal",
+           "name": "Director (a) de Industria y Comercio Forestal"
+          },
+          {
+           "code": "director_de_manejo_y_restauracion_de_bosques",
+           "name": "Director (a) de Manejo y Restauración de Bosques"
+          },
+          {
+           "code": "director_de_planificacion_evaluacion_y_seguimiento_institucional",
+           "name": "Director (a) de Planificación, Evaluación y Seguimiento Institucional"
+          },
+          {
+           "code": "director_de_recursos_humanos_y_desarrollo_institucional",
+           "name": "Director (a) de Recursos Humanos, Desarrollo Institucional y Formación de Personal"
+          },
+          {
+           "code": "director_regional",
+           "name": "Director (a) Regional"
+          },
+          {
+           "code": "director_subregional",
+           "name": "Director (a) Subregional"
+          },
+          {
+           "code": "encargado_de_acciones_de_personal",
+           "name": "Encargado (a) de Acciones de Personal"
+          },
+          {
+           "code": "encargado_ii_de_actas_junta_directiva",
+           "name": "Encargado (a) de Actas de Junta Directiva"
+          },
+          {
+           "code": "encargado_de_adaptacion",
+           "name": "Encargado (a) de Adaptación"
+          },
+          {
+           "code": "encargado_de_analisis_y_efectos_de_cambios_climatico",
+           "name": "Encargado (a) de Análisis y Efectos de cambio Climático"
+          },
+          {
+           "code": "encargado_ii_de_asuntos_judiciales",
+           "name": "Encargado (a) de Asuntos Judiciales"
+          },
+          {
+           "code": "encargado_de_bienestar_laboral",
+           "name": "Encargado (a) de Bienestar Laboral"
+          },
+          {
+           "code": "encargado_de_compras",
+           "name": "Encargado (a) de Compras"
+          },
+          {
+           "code": "encargado_de_conservacion_de_ecosistemas_forestales_estrategicos",
+           "name": "Encargado (a) de Conservación de Ecosistemas Forestales Estratégicos"
+          },
+          {
+           "code": "encargado_de_contabilidad",
+           "name": "Encargado (a) de Contabilidad"
+          },
+          {
+           "code": "encargado_ii_de_contratos_y_licitaciones",
+           "name": "Encargado (a) de Contratos y Licitaciones"
+          },
+          {
+           "code": "encargado_de_cooperacion_externa",
+           "name": "Encargado (a) de Cooperación Externa"
+          },
+          {
+           "code": "encargado_de_dotacion_personal",
+           "name": "Encargado (a) de Dotación de Personal"
+          },
+          {
+           "code": "encargado_de_educacion",
+           "name": "Encargado (a) de Educación y Capacitación"
+          },
+          {
+           "code": "encargado_de_estudios_y_planes_sectoriales",
+           "name": "Encargado (a) de Estudios y Planes Sectoriales"
+          },
+          {
+           "code": "encargado_de_evaluacion_de_resultados",
+           "name": "Encargado (a) de Evaluación de Resultados"
+          },
+          {
+           "code": "encargado_de_formacion_de_personal",
+           "name": "Encargado (a) de Formación de Personal"
+          },
+          {
+           "code": "encargado_de_fortalecimiento_forestal_municipal_comunal_y_social",
+           "name": "Encargado (a) de Fortalecimiento Forestal, Municipal, Comunal y Social"
+          },
+          {
+           "code": "encargado_de_incendios_forestales",
+           "name": "Encargado (a) de Incendios Forestales"
+          },
+          {
+           "code": "encargado_ii_de_informacion_publica_y_administrativa",
+           "name": "Encargado (a) de Información Pública y Administrativa"
+          },
+          {
+           "code": "encargado_de_inventarios",
+           "name": "Encargado (a) de Inventarios"
+          },
+          {
+           "code": "encargado_de_manejo_de_bosques_naturales_de_coniferas",
+           "name": "Encargado (a) de Manejo de Bosques de Coniferas y Mixtos"
+          },
+          {
+           "code": "encargado_de_manejo_de_bosques_naturales_de_latifoliados",
+           "name": "Encargado (a) de Manejo de Bosques Naturales de Latifoliados"
+          },
+          {
+           "code": "encargado_ii_de_manglares",
+           "name": "Encargado (a) de Manglares"
+          },
+          {
+           "code": "encargado_de_mitigacion",
+           "name": "Encargado (a) de Mitigación"
+          },
+          {
+           "code": "encargado_de_nominas",
+           "name": "Encargado (a) de Nóminas"
+          },
+          {
+           "code": "encargado_ii_de_normativa_forestal",
+           "name": "Encargado (a) de Normativa Forestal"
+          },
+          {
+           "code": "encargado_ii_de_pinabete",
+           "name": "Encargado (a) de Pinabete"
+          },
+          {
+           "code": "encargado_de_plagas_y_enfermedades_forestales",
+           "name": "Encargado (a) de Plagas y Enfermedades Forestales"
+          },
+          {
+           "code": "encargado_de_planificacion_regional",
+           "name": "Encargado (a) de Planificación Regional"
+          },
+          {
+           "code": "encargado_de_preinversion_forestal",
+           "name": "Encargado (a) de Preinversión Forestal"
+          },
+          {
+           "code": "encargado_de_presupuesto",
+           "name": "Encargado (a) de Presupuesto"
+          },
+          {
+           "code": "encargado_de_recursos_geneticos_forestales",
+           "name": "Encargado (a) de Recursos Genéticos Forestales"
+          },
+          {
+           "code": "encargado_de_seguimiento_de_planificacion_operativa",
+           "name": "Encargado (a) de Seguimiento de Planificación Operativa"
+          },
+          {
+           "code": "encargado_de_servicios_ambientales",
+           "name": "Encargado (a) de Servicios Ambientales"
+          },
+          {
+           "code": "encargado_de_silvicultura",
+           "name": "Encargado (a) de Silvicultura y Extensión Forestal"
+          },
+          {
+           "code": "encargado_de_sistemas_de_informacion_forestal_de_guatemala_sifgua",
+           "name": "Encargado (a) de Sistemas de Información Forestal de Guatemala -SIFGUA-"
+          },
+          {
+           "code": "encargado_de_sistemas_de_informacion_geografica",
+           "name": "Encargado (a) de Sistemas de Información Geográfica -SIG-"
+          },
+          {
+           "code": "encargado_de_tesoreria",
+           "name": "Encargado (a) de Tesorería"
+          },
+          {
+           "code": "encargado_del_fondo_rotativo_institucional",
+           "name": "Encargado (a) del Fondo Rotativo Institucional"
+          },
+          {
+           "code": "encargado_ii_juridico",
+           "name": "Encargado (a) Jurídico"
+          },
+          {
+           "code": "encargado_restauracion",
+           "name": "Encargado(a) de Restauración Forestal"
+          },
+          {
+           "code": "encargado_inab_anacafe",
+           "name": "Encargado(a) INAB-ANACAFE"
+          },
+          {
+           "code": "escalador",
+           "name": "Escalador (a)"
+          },
+          {
+           "code": "gerente",
+           "name": "Gerente"
+          },
+          {
+           "code": "gestor_de_la_calidad",
+           "name": "Gestor (a) de la Calidad"
+          },
+          {
+           "code": "guardarecursos",
+           "name": "Guardarecursos"
+          },
+          {
+           "code": "jefe_administrativo",
+           "name": "Jefe (a) Administrativo (a)"
+          },
+          {
+           "code": "jefe_de_analisis_y_planificacion_sectorial",
+           "name": "Jefe (a) de Análisis y Planificación Sectorial"
+          },
+          {
+           "code": "jefe_de_cambio_climatico",
+           "name": "Jefe (a) de Cambio Climático"
+          },
+          {
+           "code": "jefe_de_comercio_forestal",
+           "name": "Jefe (a) de Comercio Forestal"
+          },
+          {
+           "code": "jefe_de_conservacion_de_ecosistemas_forestales_estrategicos",
+           "name": "Jefe (a) de Conservación de Ecosistemas Forestales Estratégicos"
+          },
+          {
+           "code": "jefe_de_cooperacion_externa_y_preinversion_forestal",
+           "name": "Jefe (a) de Cooperación Externa y Preinversión Forestal"
+          },
+          {
+           "code": "jefe_de_desarrollo_institucional",
+           "name": "Jefe (a) de Desarrollo Institucional"
+          },
+          {
+           "code": "jefe_de_evaluacion_y_seguimiento_institucional",
+           "name": "Jefe (a) de Evaluación y Seguimiento Institucional"
+          },
+          {
+           "code": "jefe_de_formacion_de_personal",
+           "name": "Jefe (a) de Formación y Capacitación"
+          },
+          {
+           "code": "jefe_de_fortalecimiento_forestal_municipal_comunal_y_social",
+           "name": "Jefe (a) de Fortalecimiento Forestal, Municipal, Comunal y Social"
+          },
+          {
+           "code": "jefe_de_gestion_de_la_calidad",
+           "name": "Jefe (a) de Gestión de la Calidad"
+          },
+          {
+           "code": "jefe_de_gobernanza_forestal",
+           "name": "Jefe (a) de Gobernanza Forestal"
+          },
+          {
+           "code": "jefe_de_industria_forestal",
+           "name": "Jefe (a) de Industria Forestal"
+          },
+          {
+           "code": "jefe_de_investigacion_forestal",
+           "name": "Jefe (a) de Investigación Forestal"
+          },
+          {
+           "code": "jefe_de_manejo_de_bosques_naturales",
+           "name": "Jefe (a) de Manejo de Bosques Naturales"
+          },
+          {
+           "code": "jefe_de_mecanismos_financieros",
+           "name": "Jefe (a) de Mecanismos Financieros"
+          },
+          {
+           "code": "jefe_de_monitoreo_de_empresas_forestales",
+           "name": "Jefe (a) de Monitoreo de Empresas Forestales"
+          },
+          {
+           "code": "jefe_de_monitoreo_forestal_y_obligaciones_de_repoblacion_forestal",
+           "name": "Jefe (a) de Monitoreo Forestal y Obligaciónes de Repoblación Forestal"
+          },
+          {
+           "code": "jefe_de_monitoreo_evaluacion_institucional",
+           "name": "Jefe (a) de Monitoreo y Evaluación Institucional"
+          },
+          {
+           "code": "jefe_de_planificacion_institucional",
+           "name": "Jefe (a) de Planificación Institucional"
+          },
+          {
+           "code": "jefe_de_proteccion_forestal",
+           "name": "Jefe (a) de Protección Forestal"
+          },
+          {
+           "code": "jefe_de_recursos_humanos",
+           "name": "Jefe (a) de Recursos Humanos"
+          },
+          {
+           "code": "jefe_de_restauracion_forestal",
+           "name": "Jefe (a) de Restauración Forestal"
+          },
+          {
+           "code": "jefe_de_semillas",
+           "name": "Jefe (a) de Semillas y Recursos Genéticos Forestales"
+          },
+          {
+           "code": "jefe_de_silvicultura",
+           "name": "Jefe (a) de Silvicultura y Extensión Forestal"
+          },
+          {
+           "code": "jefe_de_sistemas_de_informacion_geografica",
+           "name": "Jefe (a) de Sistemas de Información Geográfica"
+          },
+          {
+           "code": "jefe_de_unidad_de_asuntos_juridicos",
+           "name": "Jefe (a) de Unidad de Asuntos Jurídicos"
+          },
+          {
+           "code": "jefe_de_unidad_de_auditoria_interna",
+           "name": "Jefe (a) de Unidad de Auditoría Interna"
+          },
+          {
+           "code": "jefe_de_unidad_de_comunicacion_social",
+           "name": "Jefe (a) de Unidad de Comunicación Social"
+          },
+          {
+           "code": "jefe_unidad_de_tecnologias_de_la_informacion_y_comunicacion",
+           "name": "Jefe (a) de Unidad de Tecnologías de la Información y Comunicación"
+          },
+          {
+           "code": "jefe_financiero",
+           "name": "Jefe (a) Financiero (a)"
+          },
+          {
+           "code": "operativo",
+           "name": "Operativo (a)"
+          },
+          {
+           "code": "piloto_mensajero",
+           "name": "Piloto Mensajero"
+          },
+          {
+           "code": "procurador",
+           "name": "Procurador (a)"
+          },
+          {
+           "code": "profesional_de_desarrollo_de_sistemas_y_bases_de_datos",
+           "name": "Profesional de Desarrollo de Sistemas y Bases de Datos"
+          },
+          {
+           "code": "programador_semi_senior",
+           "name": "Programador (a) Semi Senior"
+          },
+          {
+           "code": "promotor_forestal",
+           "name": "Promotor (a) Forestal"
+          },
+          {
+           "code": "promotor_forestal_mangle",
+           "name": "Promotor (a) Forestal de Mangle"
+          },
+          {
+           "code": "recepcionista_y_gestora_de_expedientes",
+           "name": "Recepcionista y Gestora de Expedientes"
+          },
+          {
+           "code": "registrador_nacional_forestal",
+           "name": "Registrador (a) Nacional Forestal"
+          },
+          {
+           "code": "responsable_de_clima_cultura",
+           "name": "Responsable de Clima y Cultura Institucional"
+          },
+          {
+           "code": "responsable_de_comunicacion_regional",
+           "name": "Responsable de Comunicación Regional"
+          },
+          {
+           "code": "responsable_de_comunicacion_social",
+           "name": "Responsable de Comunicación Social"
+          },
+          {
+           "code": "responsable_de_control_de_rutas",
+           "name": "Responsable de Control de Rutas"
+          },
+          {
+           "code": "responsable_de_desarrollo_de_sistemas_de_informacion",
+           "name": "Responsable de Desarrollo de Sistemas de Información"
+          },
+          {
+           "code": "responsable_de_evaluacion_y_seguimiento_institucional",
+           "name": "Responsable de Evaluación y Seguimiento Institucional"
+          },
+          {
+           "code": "encargado_de_genero_y_equidad",
+           "name": "Responsable de Género y Equidad"
+          },
+          {
+           "code": "responsable_de_gestion_forestal_maya",
+           "name": "Responsable de Gestión Forestal Maya"
+          },
+          {
+           "code": "responsable_de_infraestructura_y_telecomunicaciones",
+           "name": "Responsable de Infraestructura y Telecomunicaciones"
+          },
+          {
+           "code": "responsable_de_investigacion_forestal",
+           "name": "Responsable de Investigación Forestal"
+          },
+          {
+           "code": "responsable_de_la_coordinacion_sectorial_para_la_legalidad_forestal",
+           "name": "Responsable de la Coordinación Sectorial para la Legalidad Forestal"
+          },
+          {
+           "code": "responsable_de_la_formulacion_de_proyectos_sectoriales",
+           "name": "Responsable de la Formulación de Proyectos Sectoriales"
+          },
+          {
+           "code": "responsable_de_mantenimiento_e_infraestructura",
+           "name": "Responsable de Mantenimiento e Infraestructura"
+          },
+          {
+           "code": "responsable_de_monitoreo_de_empresas_forestales",
+           "name": "Responsable de Monitoreo de Empresas Forestales"
+          },
+          {
+           "code": "responsable_de_monitoreo_forestal_y_obligaciones_de_repoblacion_forestal",
+           "name": "Responsable de Monitoreo Forestal y Obligaciónes de Repoblación Forestal"
+          },
+          {
+           "code": "responsable_de_parcelas_permanentes_de_medicion_forestal_ppmf",
+           "name": "Responsable de Parcelas Permanentes de Medición Forestal -PPMF-"
+          },
+          {
+           "code": "responsable_de_pinabete",
+           "name": "Responsable de Pinabete"
+          },
+          {
+           "code": "responsable_de_proteccion_e_industrias",
+           "name": "Responsable de Protección e Industrias"
+          },
+          {
+           "code": "responsable_de_proteccion_forestal",
+           "name": "Responsable de Protección Forestal"
+          },
+          {
+           "code": "responsable_de_relaciones_publicas",
+           "name": "Responsable de Relaciones Públicas"
+          },
+          {
+           "code": "responsable_de_salud_higiene",
+           "name": "Responsable de Salud e Higiene Ocupacional"
+          },
+          {
+           "code": "responsable_de_extension_forestal",
+           "name": "Responsable de Silvicultura y Extensión Forestal"
+          },
+          {
+           "code": "responsable_tecnico_de_certificacion_de_fuentes_y_semillas_forestales_cfsf",
+           "name": "Responsable Técnico (a) de Certificación de Fuentes y Semillas Forestales -CFSF-"
+          },
+          {
+           "code": "secretaria",
+           "name": "Secretaria (o)"
+          },
+          {
+           "code": "secretario_de_gerencia",
+           "name": "Secretaria (o) de Gerencia"
+          },
+          {
+           "code": "subgerente",
+           "name": "Subgerente"
+          },
+          {
+           "code": "tecnico_administrador_finca_nacional_sanjeronimo",
+           "name": "Técnico (a) Administrador (a) de la Finca Nacional San Jerónimo"
+          },
+          {
+           "code": "tecnico_administrador_almacen",
+           "name": "Técnico (a) Administrador (a) del Almacén"
+          },
+          {
+           "code": "tecnico_administrativo",
+           "name": "Técnico (a) Administrativo (a)"
+          },
+          {
+           "code": "tecnico_i_de_acciones_de_personal",
+           "name": "Técnico (a) de Acciones de Personal"
+          },
+          {
+           "code": "tecnico_i_de_archivo_y_catalogacion",
+           "name": "Técnico (a) de Archivo y Catalogación"
+          },
+          {
+           "code": "tecnico_i_de_archivo_y_catalogacion_y_registro_de_proteccion_forestal",
+           "name": "Técnico (a) de Archivo y Catalogación del Registro de Protección Forestal"
+          },
+          {
+           "code": "tecnico_de_audio_y_video",
+           "name": "Técnico (a) de Audio-Video"
+          },
+          {
+           "code": "tecnico_iii_de_centro_de_informacion_forestal_cinfor",
+           "name": "Técnico (a) de Centro de Información Forestal -CINFOR-"
+          },
+          {
+           "code": "tecnico_de_compras",
+           "name": "Técnico (a) de Compras"
+          },
+          {
+           "code": "tecnico_de_contabilidad",
+           "name": "Técnico (a) de Contabilidad"
+          },
+          {
+           "code": "tecnico_de_fiscalizacion_de_puerto",
+           "name": "Técnico (a) de Fiscalización de Puerto"
+          },
+          {
+           "code": "tecnico_de_infraestructura_y_telecomunicaciones",
+           "name": "Técnico (a) de Infraestructura y Telecomunicaciones"
+          },
+          {
+           "code": "tecnico_de_inventarios",
+           "name": "Técnico (a) de Inventarios"
+          },
+          {
+           "code": "tecnico_de_manglares",
+           "name": "Técnico (a) de Manglares"
+          },
+          {
+           "code": "tecnico_de_mantenimiento_de_sistemas_informaticos",
+           "name": "Técnico (a) de Mantenimiento de Sistemas Informáticos"
+          },
+          {
+           "code": "tecnico_i_nominas",
+           "name": "Técnico (a) de Nóminas"
+          },
+          {
+           "code": "tecnico_de_prensa_protocolo_y_diseño",
+           "name": "Técnico (a) de Prensa, Protocolo y Diseño"
+          },
+          {
+           "code": "tecnico_de_presupuesto",
+           "name": "Técnico (a) de Presupuesto"
+          },
+          {
+           "code": "tecnico_de_sistemas_de_informacion_forestal_de_guatemala_sifgua",
+           "name": "Técnico (a) de Sistemas de Información Forestal de Guatemala -SIFGUA-"
+          },
+          {
+           "code": "tecnico_de_sistemas_de_informacion_geografica",
+           "name": "Técnico (a) de Sistemas de Información Geográfica -SIG-"
+          },
+          {
+           "code": "tecnico_de_soporte_i",
+           "name": "Técnico (a) de Soporte"
+          },
+          {
+           "code": "tecnico_de_tesoreria",
+           "name": "Técnico (a) de Tesorería"
+          },
+          {
+           "code": "tecnico_del_registro_nacional_forestal",
+           "name": "Técnico (a) del Registro Nacional Forestal"
+          },
+          {
+           "code": "tecnico_especializado_de_incentivos_forestales_pinpep",
+           "name": "Técnico (a) Especializado (a) de Incentivos Forestales PINPEP"
+          },
+          {
+           "code": "tecnico_especializado_de_incentivos_forestales_probosque",
+           "name": "Técnico (a) Especializado (a) de Incentivos Forestales PROBOSQUE"
+          },
+          {
+           "code": "tecnico_forestal",
+           "name": "Técnico (a) Forestal"
+          },
+          {
+           "code": "tecnico_juridico_i",
+           "name": "Técnico (a) Jurídico (a)"
+          },
+          {
+           "code": "tecnico_laboratorista_i",
+           "name": "Técnico (a) Laboratorista"
+          },
+          {
+           "code": "supervisor_de_visores_de_certificados",
+           "name": "Técnico (a) Supervisor (a) de Visores de Certificados"
+          },
+          {
+           "code": "visor_de_certificados_i",
+           "name": "Visor (a) de Certificados"
+          }
+         ]
+        },
+        "name": "puesto",
+        "length": 255,
+        "alias": "Puesto",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "otro_puesto",
+        "length": 255,
+        "alias": "Otro",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "telefono",
+        "length": 255,
+        "alias": "Teléfono",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "correo",
+        "length": 255,
+        "alias": "Correo electrónico",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "parentglobalid",
+        "length": 38,
+        "alias": "ParentGlobalID",
+        "type": "esriFieldTypeGUID"
+       },
+       {
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "created_user",
+        "length": 255,
+        "alias": "created_user",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "created_date",
+        "length": 29,
+        "alias": "created_date",
+        "type": "esriFieldTypeDate"
+       },
+       {
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "last_edited_user",
+        "length": 255,
+        "alias": "last_edited_user",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "last_edited_date",
+        "length": 29,
+        "alias": "last_edited_date",
+        "type": "esriFieldTypeDate"
+       }
+      ],
+      "maxRecordCountFactor": 1,
+      "dateFieldsTimeReference": {
+       "respectsDaylightSaving": false,
+       "timeZone": "UTC"
+      },
+      "supportsFieldDescriptionProperty": true,
+      "useStandardizedQueries": true,
+      "globalIdField": "globalid",
+      "description": "",
+      "syncCanReturnChanges": true,
+      "supportsAsyncDelete": true,
+      "supportedSpatialRelationships": [
+       "esriSpatialRelIntersects",
+       "esriSpatialRelContains",
+       "esriSpatialRelCrosses",
+       "esriSpatialRelEnvelopeIntersects",
+       "esriSpatialRelOverlaps",
+       "esriSpatialRelTouches",
+       "esriSpatialRelWithin"
+      ],
+      "supportsRollbackOnFailureParameter": true,
+      "isDataReplicaTracked": true,
+      "indexes": [
+       {
+        "name": "r382_sde_rowid_uk",
+        "isUnique": true,
+        "description": "",
+        "fields": "objectid",
+        "isAscending": true
+       },
+       {
+        "name": "uuid_382",
+        "isUnique": true,
+        "description": "",
+        "fields": "globalid",
+        "isAscending": true
+       }
+      ],
+      "editFieldsInfo": {
+       "editDateField": "last_edited_date",
+       "editorField": "last_edited_user",
+       "creationDateField": "created_date",
+       "creatorField": "created_user"
+      },
+      "htmlPopupType": "esriServerHTMLPopupTypeNone",
+      "hasAttachments": true,
+      "advancedQueryCapabilities": {
+       "supportsSqlExpression": true,
+       "supportsStatistics": true,
+       "supportsQueryWithResultType": true,
+       "supportsOrderBy": true,
+       "supportsLod": false,
+       "supportsQueryWithCacheHint": false,
+       "supportsQueryWithDatumTransformation": true,
+       "supportsQueryAttachmentsWithReturnUrl": true,
+       "supportsQueryAttachments": true,
+       "supportsQueryDateBins": false,
+       "supportsQueryAttachmentsCountOnly": true,
+       "supportsOrderByOnlyOnLayerFields": false,
+       "supportsOutFieldSqlExpression": true,
+       "supportsQueryWithLodSR": false,
+       "supportsTopFeaturesQuery": true,
+       "supportsPaginationOnAggregatedQueries": true,
+       "supportsMaxRecordCountFactor": true,
+       "supportsPagination": true,
+       "supportsDistinct": true,
+       "supportsQueryAnalytic": true,
+       "supportsPercentileStatistics": true,
+       "supportsHavingClause": true
+      },
+      "supportsValidateSQL": true,
+      "types": [],
+      "supportsCoordinatesQuantization": true,
+      "capabilities": "Create,Editing,Uploads,Query,Update,Sync",
+      "supportsAppend": true,
+      "supportsExceedsLimitStatistics": true,
+      "sourceSchemaChangesAllowed": true,
+      "defaultVisibility": true,
+      "advancedQueryAnalyticCapabilities": {
+       "supportsAsync": false,
+       "supportsLinearRegression": true,
+       "supportsPercentileAnalytic": false
+      },
+      "hasMetadata": false,
+      "supportedAppendFormats": "shapefile,geojson,csv,featureCollection,excel",
+      "tileMaxRecordCount": 4000,
+      "typeIdField": "",
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "sqlParserVersion": "PG_10.9.1",
+      "copyrightText": ""
+     }
+    ],
+    "layers": [
+     {
+      "extent": {
+       "ymin": -90,
+       "xmin": -180,
+       "ymax": 90,
+       "xmax": 180,
+       "spatialReference": {"wkid": 4326},
+       "type": "extent"
+      },
+      "supportsApplyEditsWithGlobalIds": true,
+      "maxRecordCount": 5000,
+      "infoInEstimates": [
+       "extent",
+       "count"
+      ],
+      "type": "Feature Layer",
+      "hasStaticData": false,
+      "syncEnabled": true,
+      "supportsAttachmentsByUploadId": true,
+      "relationships": [
+       {
+        "keyField": "globalid",
+        "role": "esriRelRoleOrigin",
+        "composite": true,
+        "name": "Registro_y_Monitoreo_de_Fuentes_de_Agua_usuarios_fuente",
+        "relatedTableId": 1,
+        "id": 0,
+        "cardinality": "esriRelCardinalityOneToMany"
+       },
+       {
+        "keyField": "globalid",
+        "role": "esriRelRoleOrigin",
+        "composite": true,
+        "name": "Registro_y_Monitoreo_de_Fuentes_de_Agua_monitoreos",
+        "relatedTableId": 2,
+        "id": 1,
+        "cardinality": "esriRelCardinalityOneToMany"
+       }
+      ],
+      "hasViews": true,
+      "supportsAttachmentsResizing": true,
+      "id": 0,
+      "supportsStatistics": true,
+      "supportedExportFormats": "sqlite,filegdb",
+      "standardMaxRecordCount": 16000,
+      "isDataVersioned": false,
+      "templates": [
+       {
+        "name": "New Feature",
+        "description": "",
+        "prototype": {
+         "symbol": null,
+         "_constructed": true,
+         "attributes": {}
+        }
+       }
+      ],
+      "hasGeometryProperties": true,
+      "supportsAdvancedQueries": true,
+      "currentVersion": 10.91,
+      "hasZ": false,
+      "advancedEditingCapabilities": {
+       "supportsAsyncApplyEdits": false,
+       "supportedSqlFormatsInCalculate": [
+        "standard"
+       ]
+      },
+      "objectIdField": "objectid",
+      "supportsQuantizationEditMode": true,
+      "name": "Registro_y_Monitoreo_de_Fuentes_de_Agua",
+      "displayField": "objectid",
+      "supportsCalculate": true,
+      "fields": [
+       {
+        "nullable": false,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "objectid",
+        "length": 4,
+        "alias": "ObjectID",
+        "type": "esriFieldTypeOID"
+       },
+       {
+        "nullable": false,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "globalid",
+        "length": 38,
+        "alias": "GlobalID",
+        "type": "esriFieldTypeGlobalID"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "nombre",
+        "length": 255,
+        "alias": "Nombre de la fuente",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_abastece_a_poblado",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "si",
+           "name": "Si"
+          },
+          {
+           "code": "no",
+           "name": "No"
+          }
+         ]
+        },
+        "name": "abastece_a_poblado",
+        "length": 255,
+        "alias": "Abastece a centro (s) poblado (s)",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_tipo_fuente",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "rio",
+           "name": "Rio"
+          },
+          {
+           "code": "riachuelo",
+           "name": "Riachuelo"
+          },
+          {
+           "code": "arroyo",
+           "name": "Arroyo"
+          },
+          {
+           "code": "lago",
+           "name": "Lago"
+          },
+          {
+           "code": "laguna",
+           "name": "Laguna"
+          },
+          {
+           "code": "nacimiento",
+           "name": "Nacimiento"
+          },
+          {
+           "code": "pozo",
+           "name": "Pozo"
+          },
+          {
+           "code": "cienega",
+           "name": "Cienega"
+          }
+         ]
+        },
+        "name": "tipo_fuente",
+        "length": 255,
+        "alias": "Tipo de fuente",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_tipo_captacion",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "extraccion_mecanica",
+           "name": "Extracción mecanica"
+          },
+          {
+           "code": "extraccion_artesanal",
+           "name": "Extracción artesanal"
+          },
+          {
+           "code": "tanque_captacion",
+           "name": "Tanque de captación"
+          },
+          {
+           "code": "planta_tratamiento",
+           "name": "Planta de tratamiento"
+          },
+          {
+           "code": "represa",
+           "name": "Represa"
+          },
+          {
+           "code": "captacion_lateral",
+           "name": "Captación lateral"
+          },
+          {
+           "code": "captacion_sumergida",
+           "name": "Captación sumergida"
+          },
+          {
+           "code": "captacion_flotante",
+           "name": "Captación flotante"
+          }
+         ]
+        },
+        "name": "tipo_captacion",
+        "length": 255,
+        "alias": "Tipo de captación",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_tenencia",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "privado",
+           "name": "Privado"
+          },
+          {
+           "code": "municipal",
+           "name": "Municipal"
+          },
+          {
+           "code": "comunal",
+           "name": "Comunal"
+          }
+         ]
+        },
+        "name": "tenencia",
+        "length": 255,
+        "alias": "Tenencia",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "altutud_msnm",
+        "alias": "Altitud (MSNM)",
+        "type": "esriFieldTypeInteger"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_region",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "i",
+           "name": "I METROPOLITANA"
+          },
+          {
+           "code": "ii",
+           "name": "II LAS VERAPACES"
+          },
+          {
+           "code": "iii",
+           "name": "III NOR ORIENTE"
+          },
+          {
+           "code": "iv",
+           "name": "IV SUR ORIENTE"
+          },
+          {
+           "code": "v",
+           "name": "V CENTRAL"
+          },
+          {
+           "code": "vi",
+           "name": "VI SUR OCCIDENTE"
+          },
+          {
+           "code": "vii",
+           "name": "VII NOR OCCIDENTE"
+          },
+          {
+           "code": "viii",
+           "name": "VIII PETÉN"
+          },
+          {
+           "code": "ix",
+           "name": "IX COSTA SUR"
+          }
+         ]
+        },
+        "name": "region",
+        "length": 255,
+        "alias": "Región",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_sub_region",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "i_1",
+           "name": "I-1 METROPOLITANA"
+          },
+          {
+           "code": "ii_1",
+           "name": "II-1 TACTIC"
+          },
+          {
+           "code": "ii_2",
+           "name": "II-2 RABINAL"
+          },
+          {
+           "code": "ii_3",
+           "name": "II-3 COBAN"
+          },
+          {
+           "code": "ii_4",
+           "name": "II-4 SAN JERONIMO"
+          },
+          {
+           "code": "ii_5",
+           "name": "II-5 FRAY BARTOLOME DE LAS CASAS"
+          },
+          {
+           "code": "ii_6",
+           "name": "II-6 IXCAN"
+          },
+          {
+           "code": "ii_7",
+           "name": "II-7 SANTA CATALINA LA TINTA"
+          },
+          {
+           "code": "iii_1",
+           "name": "III-1 IZABAL"
+          },
+          {
+           "code": "iii_2",
+           "name": "III-2 ZACAPA"
+          },
+          {
+           "code": "iii_3",
+           "name": "III-3 CHIQUIMULA"
+          },
+          {
+           "code": "iii_4",
+           "name": "III-4 EL PROGRESO"
+          },
+          {
+           "code": "iv_1",
+           "name": "IV-1 JALAPA"
+          },
+          {
+           "code": "iv_2",
+           "name": "IV-2 SANTA ROSA"
+          },
+          {
+           "code": "iv_3",
+           "name": "IV-3 JUTIAPA"
+          },
+          {
+           "code": "v_1",
+           "name": "V-1 ANTIGUA GUATEMALA"
+          },
+          {
+           "code": "v_2",
+           "name": "V-2 CHIMALTENANGO"
+          },
+          {
+           "code": "vi_1",
+           "name": "VI-1 QUETZALTENANGO"
+          },
+          {
+           "code": "vi_2",
+           "name": "VI-2 SAN MARCOS"
+          },
+          {
+           "code": "vi_3",
+           "name": "VI-3 TOTONICAPAN"
+          },
+          {
+           "code": "vi_4",
+           "name": "VI-4 SOLOLÁ"
+          },
+          {
+           "code": "vi_5",
+           "name": "VI-5 TEJUTLA"
+          },
+          {
+           "code": "vii_1",
+           "name": "VII-1 SANTA CRUZ DEL QUICHÉ"
+          },
+          {
+           "code": "vii_2",
+           "name": "VII-2 HUEHUETENANGO"
+          },
+          {
+           "code": "vii_3",
+           "name": "VII-3 NEBAJ"
+          },
+          {
+           "code": "vii_4",
+           "name": "VII-4 SOLOMA"
+          },
+          {
+           "code": "vii_5",
+           "name": "VII-5 SANTA ANA HUISTA"
+          },
+          {
+           "code": "viii_1",
+           "name": "VIII-1 SAN FRANCISCO"
+          },
+          {
+           "code": "viii_2",
+           "name": "VIII-2 POPTÚN"
+          },
+          {
+           "code": "viii_3",
+           "name": "VIII-3 SAYAXCHÉ"
+          },
+          {
+           "code": "viii_4",
+           "name": "VIII-4 LA LIBERTAD"
+          },
+          {
+           "code": "ix_1",
+           "name": "IX-1 SUCHITEPEQUEZ"
+          },
+          {
+           "code": "ix_2",
+           "name": "IX-2 ESCUINTLA"
+          },
+          {
+           "code": "ix_3",
+           "name": "IX-3 RETALHULEU"
+          },
+          {
+           "code": "ix_4",
+           "name": "IX-4 COATEPEQUE"
+          }
+         ]
+        },
+        "name": "sub_region",
+        "length": 255,
+        "alias": "Subregion",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_departamento",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "alta_verapaz",
+           "name": "ALTA VERAPAZ"
+          },
+          {
+           "code": "baja_verapaz",
+           "name": "BAJA VERAPAZ"
+          },
+          {
+           "code": "chimaltenango",
+           "name": "CHIMALTENANGO"
+          },
+          {
+           "code": "chiquimula",
+           "name": "CHIQUIMULA"
+          },
+          {
+           "code": "el_progreso",
+           "name": "EL PROGRESO"
+          },
+          {
+           "code": "escuintla",
+           "name": "ESCUINTLA"
+          },
+          {
+           "code": "guatemala",
+           "name": "GUATEMALA"
+          },
+          {
+           "code": "huehuetenango",
+           "name": "HUEHUETENANGO"
+          },
+          {
+           "code": "izabal",
+           "name": "IZABAL"
+          },
+          {
+           "code": "jalapa",
+           "name": "JALAPA"
+          },
+          {
+           "code": "jutiapa",
+           "name": "JUTIAPA"
+          },
+          {
+           "code": "peten",
+           "name": "PETÉN"
+          },
+          {
+           "code": "quetzaltenango",
+           "name": "QUETZALTENANGO"
+          },
+          {
+           "code": "quiche",
+           "name": "QUICHÉ"
+          },
+          {
+           "code": "retalhuleu",
+           "name": "RETALHULEU"
+          },
+          {
+           "code": "sacatepequez",
+           "name": "SACATEPÉQUEZ"
+          },
+          {
+           "code": "san_marcos",
+           "name": "SAN MARCOS"
+          },
+          {
+           "code": "santa_rosa",
+           "name": "SANTA ROSA"
+          },
+          {
+           "code": "solola",
+           "name": "SOLOLÁ"
+          },
+          {
+           "code": "suchitepequez",
+           "name": "SUCHITEPÉQUEZ"
+          },
+          {
+           "code": "totonicapan",
+           "name": "TOTONICAPÁN"
+          },
+          {
+           "code": "zacapa",
+           "name": "ZACAPA"
+          }
+         ]
+        },
+        "name": "departamento",
+        "length": 255,
+        "alias": "Departamento",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_municipio",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "guatemala_101",
+           "name": "GUATEMALA"
+          },
+          {
+           "code": "santa_catarina_pinula_102",
+           "name": "SANTA CATARINA PINULA"
+          },
+          {
+           "code": "san_jose_pinula_103",
+           "name": "SAN JOSÉ PINULA"
+          },
+          {
+           "code": "san_jose_del_golfo_104",
+           "name": "SAN JOSÉ DEL GOLFO"
+          },
+          {
+           "code": "palencia_105",
+           "name": "PALENCIA"
+          },
+          {
+           "code": "chinautla_106",
+           "name": "CHINAUTLA"
+          },
+          {
+           "code": "san_pedro_ayampuc_107",
+           "name": "SAN PEDRO AYAMPUC"
+          },
+          {
+           "code": "mixco_108",
+           "name": "MIXCO"
+          },
+          {
+           "code": "san_pedro_sacatepequez_109",
+           "name": "SAN PEDRO SACATEPÉQUEZ"
+          },
+          {
+           "code": "san_juan_sacatepequez_110",
+           "name": "SAN JUAN SACATEPÉQUEZ"
+          },
+          {
+           "code": "san_raymundo_111",
+           "name": "SAN RAYMUNDO"
+          },
+          {
+           "code": "chuarrancho_112",
+           "name": "CHUARRANCHO"
+          },
+          {
+           "code": "fraijanes_113",
+           "name": "FRAIJANES"
+          },
+          {
+           "code": "amatitlan_114",
+           "name": "AMATITLÁN"
+          },
+          {
+           "code": "villa_nueva_115",
+           "name": "VILLA NUEVA"
+          },
+          {
+           "code": "villa_canales_116",
+           "name": "VILLA CANALES"
+          },
+          {
+           "code": "san_miguel_petapa_117",
+           "name": "SAN MIGUEL PETAPA"
+          },
+          {
+           "code": "guastatoya_201",
+           "name": "GUASTATOYA"
+          },
+          {
+           "code": "morazan_202",
+           "name": "MORAZÁN"
+          },
+          {
+           "code": "san_agustin_acasaguastlan_203",
+           "name": "SAN AGUSTÍN ACASAGUASTLÁN"
+          },
+          {
+           "code": "san_cristobal_acasaguastlan_204",
+           "name": "SAN CRISTÓBAL ACASAGUASTLÁN"
+          },
+          {
+           "code": "el_jicaro_205",
+           "name": "EL JÍCARO"
+          },
+          {
+           "code": "sansare_206",
+           "name": "SANSARE"
+          },
+          {
+           "code": "sanarate_207",
+           "name": "SANARATE"
+          },
+          {
+           "code": "san_antonio_la_paz_208",
+           "name": "SAN ANTONIO LA PAZ"
+          },
+          {
+           "code": "antigua_guatemala_301",
+           "name": "ANTIGUA GUATEMALA"
+          },
+          {
+           "code": "jocotenango_302",
+           "name": "JOCOTENANGO"
+          },
+          {
+           "code": "pastores_303",
+           "name": "PASTORES"
+          },
+          {
+           "code": "sumpango_304",
+           "name": "SUMPANGO"
+          },
+          {
+           "code": "santo_domingo_xenacoj_305",
+           "name": "SANTO DOMINGO XENACOJ"
+          },
+          {
+           "code": "santiago_sacatepequez_306",
+           "name": "SANTIAGO SACATEPÉQUEZ"
+          },
+          {
+           "code": "san_bartolome_milpas_altas_307",
+           "name": "SAN BARTOLOME MILPAS ALTAS"
+          },
+          {
+           "code": "san_lucas_sacatepequez_308",
+           "name": "SAN LUCAS SACATEPÉQUEZ"
+          },
+          {
+           "code": "santa_lucia_milpas_altas_309",
+           "name": "SANTA LUCÍA MILPAS ALTAS"
+          },
+          {
+           "code": "magdalena_milpas_altas_310",
+           "name": "MAGDALENA MILPAS ALTAS"
+          },
+          {
+           "code": "santa_maria_de_jesus_311",
+           "name": "SANTA MARIA DE JESUS"
+          },
+          {
+           "code": "ciudad_vieja_312",
+           "name": "CIUDAD VIEJA"
+          },
+          {
+           "code": "san_miguel_dueñas_313",
+           "name": "SAN MIGUEL DUEÑAS"
+          },
+          {
+           "code": "san_juan_alotenango_314",
+           "name": "SAN JUAN ALOTENANGO"
+          },
+          {
+           "code": "san_antonio_aguas_calientes_315",
+           "name": "SAN ANTONIO AGUAS CALIENTES"
+          },
+          {
+           "code": "santa_catarina_barahona_316",
+           "name": "SANTA CATARINA BARAHONA"
+          },
+          {
+           "code": "chimaltenango_401",
+           "name": "CHIMALTENANGO"
+          },
+          {
+           "code": "san_jose_poaquil_402",
+           "name": "SAN JOSÉ POAQUIL"
+          },
+          {
+           "code": "san_martin_jilotepeque_403",
+           "name": "SAN MARTÍN JILOTEPEQUE"
+          },
+          {
+           "code": "san_juan_comalapa_404",
+           "name": "SAN JUAN COMALAPA"
+          },
+          {
+           "code": "santa_apolonia_405",
+           "name": "SANTA APOLONIA"
+          },
+          {
+           "code": "tecpan_guatemala_406",
+           "name": "TECPÁN GUATEMALA"
+          },
+          {
+           "code": "patzun_407",
+           "name": "PATZÚN"
+          },
+          {
+           "code": "san_miguel_pochuta_408",
+           "name": "SAN MIGUEL POCHUTA"
+          },
+          {
+           "code": "patzicia_409",
+           "name": "PATZICÍA"
+          },
+          {
+           "code": "santa_cruz_balanya_410",
+           "name": "SANTA CRUZ BALANYA"
+          },
+          {
+           "code": "acatenango_411",
+           "name": "ACATENANGO"
+          },
+          {
+           "code": "san_pedro_yepocapa_412",
+           "name": "SAN PEDRO YEPOCAPA"
+          },
+          {
+           "code": "san_andres_itzapa_413",
+           "name": "SAN ANDRÉS ITZAPA"
+          },
+          {
+           "code": "parramos_414",
+           "name": "PARRAMOS"
+          },
+          {
+           "code": "zaragoza_415",
+           "name": "ZARAGOZA"
+          },
+          {
+           "code": "el_tejar_416",
+           "name": "EL TEJAR"
+          },
+          {
+           "code": "escuintla_501",
+           "name": "ESCUINTLA"
+          },
+          {
+           "code": "santa_lucia_cotzumalguapa_502",
+           "name": "SANTA LUCÍA COTZUMALGUAPA"
+          },
+          {
+           "code": "la_democracia_503",
+           "name": "LA DEMOCRACIA"
+          },
+          {
+           "code": "siquinala_504",
+           "name": "SIQUINALÁ"
+          },
+          {
+           "code": "masagua_505",
+           "name": "MASAGUA"
+          },
+          {
+           "code": "tiquisate_506",
+           "name": "TIQUISATE"
+          },
+          {
+           "code": "la_gomera_507",
+           "name": "LA GOMERA"
+          },
+          {
+           "code": "guanagazapa_508",
+           "name": "GUANAGAZAPA"
+          },
+          {
+           "code": "puerto_san_jose_509",
+           "name": "PUERTO SAN JOSÉ"
+          },
+          {
+           "code": "iztapa_510",
+           "name": "IZTAPA"
+          },
+          {
+           "code": "palin_511",
+           "name": "PALÍN"
+          },
+          {
+           "code": "san_vicente_pacaya_512",
+           "name": "SAN VICENTE PACAYA"
+          },
+          {
+           "code": "nueva_concepcion_513",
+           "name": "NUEVA CONCEPCIÓN"
+          },
+          {
+           "code": "sipacate_514",
+           "name": "SIPACATE"
+          },
+          {
+           "code": "cuilapa_601",
+           "name": "CUILAPA"
+          },
+          {
+           "code": "barberena_602",
+           "name": "BARBERENA"
+          },
+          {
+           "code": "santa_rosa_de_lima_603",
+           "name": "SANTA ROSA DE LIMA"
+          },
+          {
+           "code": "casillas_604",
+           "name": "CASILLAS"
+          },
+          {
+           "code": "san_rafael_las_flores_605",
+           "name": "SAN RAFAEL LAS FLORES"
+          },
+          {
+           "code": "oratorio_606",
+           "name": "ORATORIO"
+          },
+          {
+           "code": "san_juan_tecuaco_607",
+           "name": "SAN JUAN TECUACO"
+          },
+          {
+           "code": "chiquimulilla_608",
+           "name": "CHIQUIMULILLA"
+          },
+          {
+           "code": "taxisco_609",
+           "name": "TAXISCO"
+          },
+          {
+           "code": "santa_maria_ixhuatan_610",
+           "name": "SANTA MARÍA IXHUATÁN"
+          },
+          {
+           "code": "guazacapan_611",
+           "name": "GUAZACAPÁN"
+          },
+          {
+           "code": "santa_cruz_naranjo_612",
+           "name": "SANTA CRUZ NARANJO"
+          },
+          {
+           "code": "pueblo_nuevo_viñas_613",
+           "name": "PUEBLO NUEVO VIÑAS"
+          },
+          {
+           "code": "nueva_santa_rosa_614",
+           "name": "NUEVA SANTA ROSA"
+          },
+          {
+           "code": "solola_701",
+           "name": "SOLOLÁ"
+          },
+          {
+           "code": "san_jose_chacaya_702",
+           "name": "SAN JOSÉ CHACAYÁ"
+          },
+          {
+           "code": "santa_maria_visitacion_703",
+           "name": "SANTA MARÍA VISITACIÓN"
+          },
+          {
+           "code": "santa_lucia_utatlan_704",
+           "name": "SANTA LUCÍA UTATLÁN"
+          },
+          {
+           "code": "nahuala_705",
+           "name": "NAHUALÁ"
+          },
+          {
+           "code": "santa_catarina_ixtahuacan_706",
+           "name": "SANTA CATARINA IXTAHUACÁN"
+          },
+          {
+           "code": "santa_clara_la_laguna_707",
+           "name": "SANTA CLARA LA LAGUNA"
+          },
+          {
+           "code": "concepcion_708",
+           "name": "CONCEPCION"
+          },
+          {
+           "code": "san_andres_semetabaj_709",
+           "name": "SAN ANDRÉS SEMETABAJ"
+          },
+          {
+           "code": "panajachel_710",
+           "name": "PANAJACHEL"
+          },
+          {
+           "code": "santa_catarina_palopo_711",
+           "name": "SANTA CATARINA PALOPO"
+          },
+          {
+           "code": "san_antonio_palopo_712",
+           "name": "SAN ANTONIO PALOPÓ"
+          },
+          {
+           "code": "san_lucas_toliman_713",
+           "name": "SAN LUCAS TOLIMÁN"
+          },
+          {
+           "code": "santa_cruz_la_laguna_714",
+           "name": "SANTA CRUZ LA LAGUNA"
+          },
+          {
+           "code": "san_pablo_la_laguna_715",
+           "name": "SAN PABLO LA LAGUNA"
+          },
+          {
+           "code": "san_marcos_la_laguna_716",
+           "name": "SAN MARCOS LA LAGUNA"
+          },
+          {
+           "code": "san_juan_la_laguna_717",
+           "name": "SAN JUAN LA LAGUNA"
+          },
+          {
+           "code": "san_pedro_la_laguna_718",
+           "name": "SAN PEDRO LA LAGUNA"
+          },
+          {
+           "code": "santiago_atitlan_719",
+           "name": "SANTIAGO ATITLÁN"
+          },
+          {
+           "code": "totonicapan_801",
+           "name": "TOTONICAPÁN"
+          },
+          {
+           "code": "san_cristobal_totonicapan_802",
+           "name": "SAN CRISTOBAL TOTONICAPAN"
+          },
+          {
+           "code": "san_francisco_el_alto_803",
+           "name": "SAN FRANCISCO EL ALTO"
+          },
+          {
+           "code": "san_andres_xecul_804",
+           "name": "SAN ANDRÉS XECUL"
+          },
+          {
+           "code": "momostenango_805",
+           "name": "MOMOSTENANGO"
+          },
+          {
+           "code": "santa_maria_chiquimula_806",
+           "name": "SANTA MARÍA CHIQUIMULA"
+          },
+          {
+           "code": "santa_lucia_la_reforma_807",
+           "name": "SANTA LUCIA LA REFORMA"
+          },
+          {
+           "code": "san_bartolo_aguas_calientes_808",
+           "name": "SAN BARTOLO AGUAS CALIENTES"
+          },
+          {
+           "code": "quetzaltenango_901",
+           "name": "QUETZALTENANGO"
+          },
+          {
+           "code": "salcaja_902",
+           "name": "SALCAJÁ"
+          },
+          {
+           "code": "olintepeque_903",
+           "name": "OLINTEPEQUE"
+          },
+          {
+           "code": "san_carlos_sija_904",
+           "name": "SAN CARLOS SIJA"
+          },
+          {
+           "code": "sibilia_905",
+           "name": "SIBILIA"
+          },
+          {
+           "code": "cabrican_906",
+           "name": "CABRICÁN"
+          },
+          {
+           "code": "cajola_907",
+           "name": "CAJOLÁ"
+          },
+          {
+           "code": "san_miguel_siguila_908",
+           "name": "SAN MIGUEL SIGÜILÁ"
+          },
+          {
+           "code": "san_juan_ostuncalco_909",
+           "name": "SAN JUAN OSTUNCALCO"
+          },
+          {
+           "code": "san_mateo_910",
+           "name": "SAN MATEO"
+          },
+          {
+           "code": "concepcion_chiquirichapa_911",
+           "name": "CONCEPCIÓN CHIQUIRICHAPA"
+          },
+          {
+           "code": "san_martin_sacatepequez_912",
+           "name": "SAN MARTÍN SACATEPÉQUEZ"
+          },
+          {
+           "code": "almolonga_913",
+           "name": "ALMOLONGA"
+          },
+          {
+           "code": "cantel_914",
+           "name": "CANTEL"
+          },
+          {
+           "code": "huitan_915",
+           "name": "HUITÁN"
+          },
+          {
+           "code": "zunil_916",
+           "name": "ZUNIL"
+          },
+          {
+           "code": "colomba_costa_cuca_917",
+           "name": "COLOMBA COSTA CUCA"
+          },
+          {
+           "code": "san_francisco_la_union_918",
+           "name": "SAN FRANCISCO LA UNIÓN"
+          },
+          {
+           "code": "el_palmar_919",
+           "name": "EL PALMAR"
+          },
+          {
+           "code": "coatepeque_920",
+           "name": "COATEPEQUE"
+          },
+          {
+           "code": "genova_921",
+           "name": "GÉNOVA"
+          },
+          {
+           "code": "flores_costa_cuca_922",
+           "name": "FLORES COSTA CUCA"
+          },
+          {
+           "code": "la_esperanza_923",
+           "name": "LA ESPERANZA"
+          },
+          {
+           "code": "palestina_de_los_altos_924",
+           "name": "PALESTINA DE LOS ALTOS"
+          },
+          {
+           "code": "mazatenango_1001",
+           "name": "MAZATENANGO"
+          },
+          {
+           "code": "cuyotenango_1002",
+           "name": "CUYOTENANGO"
+          },
+          {
+           "code": "san_francisco_zapotitlan_1003",
+           "name": "SAN FRANCISCO ZAPOTITLÁN"
+          },
+          {
+           "code": "san_bernardino_1004",
+           "name": "SAN BERNARDINO"
+          },
+          {
+           "code": "san_jose_el_idolo_1005",
+           "name": "SAN JOSÉ EL ÍDOLO"
+          },
+          {
+           "code": "santo_domingo_suchitepequez_100",
+           "name": "SANTO DOMINGO SUCHITEPÉQUEZ"
+          },
+          {
+           "code": "san_lorenzo_1007",
+           "name": "SAN LORENZO"
+          },
+          {
+           "code": "samayac_1008",
+           "name": "SAMAYAC"
+          },
+          {
+           "code": "san_pablo_jocopilas_1009",
+           "name": "SAN PABLO JOCOPILAS"
+          },
+          {
+           "code": "san_antonio_suchitepequez_1010",
+           "name": "SAN ANTONIO SUCHITEPÉQUEZ"
+          },
+          {
+           "code": "san_miguel_panan_1011",
+           "name": "SAN MIGUEL PANÁN"
+          },
+          {
+           "code": "san_gabriel_1012",
+           "name": "SAN GABRIEL"
+          },
+          {
+           "code": "chicacao_1013",
+           "name": "CHICACAO"
+          },
+          {
+           "code": "patulul_1014",
+           "name": "PATULUL"
+          },
+          {
+           "code": "santa_barbara_1015",
+           "name": "SANTA BÁRBARA"
+          },
+          {
+           "code": "san_juan_bautista_1016",
+           "name": "SAN JUAN BAUTISTA"
+          },
+          {
+           "code": "santo_tomas_la_union_1017",
+           "name": "SANTO TOMAS LA UNION"
+          },
+          {
+           "code": "zunilito_1018",
+           "name": "ZUNILITO"
+          },
+          {
+           "code": "pueblo_nuevo_1019",
+           "name": "PUEBLO NUEVO"
+          },
+          {
+           "code": "rio_bravo_1020",
+           "name": "RÍO BRAVO"
+          },
+          {
+           "code": "san_jose_la_maquina_1021",
+           "name": "SAN JOSE LA MAQUINA"
+          },
+          {
+           "code": "retalhuleu_1101",
+           "name": "RETALHULEU"
+          },
+          {
+           "code": "san_sebastian_1102",
+           "name": "SAN SEBASTIAN"
+          },
+          {
+           "code": "santa_cruz_mulua_1103",
+           "name": "SANTA CRUZ MULUÁ"
+          },
+          {
+           "code": "san_martin_zapotitlan_1104",
+           "name": "SAN MARTÍN ZAPOTITLÁN"
+          },
+          {
+           "code": "san_felipe_1105",
+           "name": "SAN FELIPE"
+          },
+          {
+           "code": "san_andres_villa_seca_1106",
+           "name": "SAN ANDRÉS VILLA SECA"
+          },
+          {
+           "code": "champerico_1107",
+           "name": "CHAMPERICO"
+          },
+          {
+           "code": "nuevo_san_carlos_1108",
+           "name": "NUEVO SAN CARLOS"
+          },
+          {
+           "code": "el_asintal_1109",
+           "name": "EL ASINTAL"
+          },
+          {
+           "code": "san_marcos_1201",
+           "name": "SAN MARCOS"
+          },
+          {
+           "code": "san_pedro_sacatepequez_1202",
+           "name": "SAN PEDRO SACATEPÉQUEZ"
+          },
+          {
+           "code": "san_antonio_sacatepequez_1203",
+           "name": "SAN ANTONIO SACATEPÉQUEZ"
+          },
+          {
+           "code": "comitancillo_1204",
+           "name": "COMITANCILLO"
+          },
+          {
+           "code": "san_miguel_ixtahuacan_1205",
+           "name": "SAN MIGUEL IXTAHUACÁN"
+          },
+          {
+           "code": "concepcion_tutuapa_1206",
+           "name": "CONCEPCION TUTUAPA"
+          },
+          {
+           "code": "tacana_1207",
+           "name": "TACANÁ"
+          },
+          {
+           "code": "sibinal_1208",
+           "name": "SIBINAL"
+          },
+          {
+           "code": "tajumulco_1209",
+           "name": "TAJUMULCO"
+          },
+          {
+           "code": "tejutla_1210",
+           "name": "TEJUTLA"
+          },
+          {
+           "code": "san_rafael_pie_de_la_cuesta_121",
+           "name": "SAN RAFAEL PIE DE LA CUESTA"
+          },
+          {
+           "code": "nuevo_progreso_1212",
+           "name": "NUEVO PROGRESO"
+          },
+          {
+           "code": "el_tumbador_1213",
+           "name": "EL TUMBADOR"
+          },
+          {
+           "code": "san_jose_el_rodeo_1214",
+           "name": "SAN JOSÉ EL RODEO"
+          },
+          {
+           "code": "malacatan_1215",
+           "name": "MALACATÁN"
+          },
+          {
+           "code": "catarina_1216",
+           "name": "CATARINA"
+          },
+          {
+           "code": "ayutla_1217",
+           "name": "AYUTLA"
+          },
+          {
+           "code": "ocos_1218",
+           "name": "OCÓS"
+          },
+          {
+           "code": "san_pablo_1219",
+           "name": "SAN PABLO"
+          },
+          {
+           "code": "el_quetzal_1220",
+           "name": "EL QUETZAL"
+          },
+          {
+           "code": "la_reforma_1221",
+           "name": "LA REFORMA"
+          },
+          {
+           "code": "pajapita_1222",
+           "name": "PAJAPITA"
+          },
+          {
+           "code": "ixchiguan_1223",
+           "name": "IXCHIGUAN"
+          },
+          {
+           "code": "san_jose_ojetenam_1224",
+           "name": "SAN JOSÉ OJETENAM"
+          },
+          {
+           "code": "san_cristobal_cucho_1225",
+           "name": "SAN CRISTÓBAL CUCHO"
+          },
+          {
+           "code": "sipacapa_1226",
+           "name": "SIPACAPA"
+          },
+          {
+           "code": "esquipulas_palo_gordo_1227",
+           "name": "ESQUIPULAS PALO GORDO"
+          },
+          {
+           "code": "rio_blanco_1228",
+           "name": "RIO BLANCO"
+          },
+          {
+           "code": "san_lorenzo_1229",
+           "name": "SAN LORÉNZO"
+          },
+          {
+           "code": "la_blanca_1230",
+           "name": "LA BLANCA"
+          },
+          {
+           "code": "huehuetenango_1301",
+           "name": "HUEHUETENANGO"
+          },
+          {
+           "code": "chiantla_1302",
+           "name": "CHIANTLA"
+          },
+          {
+           "code": "malacatancito_1303",
+           "name": "MALACATANCITO"
+          },
+          {
+           "code": "cuilco_1304",
+           "name": "CUILCO"
+          },
+          {
+           "code": "nenton_1305",
+           "name": "NENTÓN"
+          },
+          {
+           "code": "san_pedro_necta_1306",
+           "name": "SAN PEDRO NECTA"
+          },
+          {
+           "code": "jacaltenango_1307",
+           "name": "JACALTENANGO"
+          },
+          {
+           "code": "san_pedro_soloma_1308",
+           "name": "SAN PEDRO SOLOMA"
+          },
+          {
+           "code": "san_ildefonso_ixtahuacan_1309",
+           "name": "SAN ILDEFONSO IXTAHUACÁN"
+          },
+          {
+           "code": "santa_barbara_1310",
+           "name": "SANTA BÁRBARA"
+          },
+          {
+           "code": "la_libertad_1311",
+           "name": "LA LIBERTAD"
+          },
+          {
+           "code": "la_democracia_1312",
+           "name": "LA DEMOCRACIA"
+          },
+          {
+           "code": "san_miguel_acatan_1313",
+           "name": "SAN MIGUEL ACATÁN"
+          },
+          {
+           "code": "san_rafael_la_independencia_131",
+           "name": "SAN RAFAEL LA INDEPENDENCIA"
+          },
+          {
+           "code": "todos_santos_cuchumatan_1315",
+           "name": "TODOS SANTOS CUCHUMATÁN"
+          },
+          {
+           "code": "san_juan_atitan_1316",
+           "name": "SAN JUAN ATITÁN"
+          },
+          {
+           "code": "santa_eulalia_1317",
+           "name": "SANTA EULALIA"
+          },
+          {
+           "code": "san_mateo_ixtatan_1318",
+           "name": "SAN MATEO IXTATÁN"
+          },
+          {
+           "code": "colotenango_1319",
+           "name": "COLOTENANGO"
+          },
+          {
+           "code": "san_sebastian_huehuetenango_132",
+           "name": "SAN SEBASTIÁN HUEHUETENANGO"
+          },
+          {
+           "code": "tectitan_1321",
+           "name": "TECTITÁN"
+          },
+          {
+           "code": "concepcion_huista_1322",
+           "name": "CONCEPCIÓN HUISTA"
+          },
+          {
+           "code": "san_juan_ixcoy_1323",
+           "name": "SAN JUAN IXCOY"
+          },
+          {
+           "code": "san_antonio_huista_1324",
+           "name": "SAN ANTONIO HUISTA"
+          },
+          {
+           "code": "san_sebastian_coatan_1325",
+           "name": "SAN SEBASTIÁN COATÁN"
+          },
+          {
+           "code": "santa_cruz_barillas_1326",
+           "name": "SANTA CRUZ BARILLAS"
+          },
+          {
+           "code": "aguacatan_1327",
+           "name": "AGUACATÁN"
+          },
+          {
+           "code": "san_rafael_petzal_1328",
+           "name": "SAN RAFAEL PETZAL"
+          },
+          {
+           "code": "san_gaspar_ixchil_1329",
+           "name": "SAN GASPAR IXCHIL"
+          },
+          {
+           "code": "santiago_chimaltenango_1330",
+           "name": "SANTIAGO CHIMALTENANGO"
+          },
+          {
+           "code": "santa_ana_huista_1331",
+           "name": "SANTA ANA HUISTA"
+          },
+          {
+           "code": "union_cantinil_1332",
+           "name": "UNIÓN CANTINIL"
+          },
+          {
+           "code": "petatan_1333",
+           "name": "PETATAN"
+          },
+          {
+           "code": "santa_cruz_del_quiche_1401",
+           "name": "SANTA CRUZ DEL QUICHÉ"
+          },
+          {
+           "code": "chiche_1402",
+           "name": "CHICHÉ"
+          },
+          {
+           "code": "chinique_1403",
+           "name": "CHINIQUE"
+          },
+          {
+           "code": "zacualpa_1404",
+           "name": "ZACUALPA"
+          },
+          {
+           "code": "chajul_1405",
+           "name": "CHAJUL"
+          },
+          {
+           "code": "chichicastenango_1406",
+           "name": "CHICHICASTENANGO"
+          },
+          {
+           "code": "patzite_1407",
+           "name": "PATZITE"
+          },
+          {
+           "code": "san_antonio_ilotenango_1408",
+           "name": "SAN ANTONIO ILOTENANGO"
+          },
+          {
+           "code": "san_pedro_jocopilas_1409",
+           "name": "SAN PEDRO JOCOPILAS"
+          },
+          {
+           "code": "cunen_1410",
+           "name": "CUNÉN"
+          },
+          {
+           "code": "san_juan_cotzal_1411",
+           "name": "SAN JUAN COTZAL"
+          },
+          {
+           "code": "joyabaj_1412",
+           "name": "JOYABAJ"
+          },
+          {
+           "code": "nebaj_1413",
+           "name": "NEBAJ"
+          },
+          {
+           "code": "san_andres_sajcabaja_1414",
+           "name": "SAN ANDRÉS SAJCABAJA"
+          },
+          {
+           "code": "uspantan_1415",
+           "name": "USPANTÁN"
+          },
+          {
+           "code": "sacapulas_1416",
+           "name": "SACAPULAS"
+          },
+          {
+           "code": "san_bartolome_jocotenango_1417",
+           "name": "SAN BARTOLOMÉ JOCOTENANGO"
+          },
+          {
+           "code": "canilla_1418",
+           "name": "CANILLÁ"
+          },
+          {
+           "code": "chicaman_1419",
+           "name": "CHICAMÁN"
+          },
+          {
+           "code": "ixcan_1420",
+           "name": "IXCÁN"
+          },
+          {
+           "code": "pachalum_1421",
+           "name": "PACHALUM"
+          },
+          {
+           "code": "salama_1501",
+           "name": "SALAMÁ"
+          },
+          {
+           "code": "san_miguel_chicaj_1502",
+           "name": "SAN MIGUEL CHICAJ"
+          },
+          {
+           "code": "rabinal_1503",
+           "name": "RABINAL"
+          },
+          {
+           "code": "cubulco_1504",
+           "name": "CUBULCO"
+          },
+          {
+           "code": "granados_1505",
+           "name": "GRANADOS"
+          },
+          {
+           "code": "santa_cruz_el_chol_1506",
+           "name": "SANTA CRUZ EL CHOL"
+          },
+          {
+           "code": "san_jeronimo_1507",
+           "name": "SAN JERÓNIMO"
+          },
+          {
+           "code": "purulha_1508",
+           "name": "PURULHÁ"
+          },
+          {
+           "code": "coban_1601",
+           "name": "COBÁN"
+          },
+          {
+           "code": "santa_cruz_verapaz_1602",
+           "name": "SANTA CRUZ VERAPAZ"
+          },
+          {
+           "code": "san_cristobal_verapaz_1603",
+           "name": "SAN CRISTÓBAL VERAPAZ"
+          },
+          {
+           "code": "tactic_1604",
+           "name": "TACTIC"
+          },
+          {
+           "code": "tamahu_1605",
+           "name": "TAMAHÚ"
+          },
+          {
+           "code": "san_miguel_tucuru_1606",
+           "name": "SAN MIGUEL TUCURÚ"
+          },
+          {
+           "code": "panzos_1607",
+           "name": "PANZÓS"
+          },
+          {
+           "code": "senahu_1608",
+           "name": "SENAHÚ"
+          },
+          {
+           "code": "san_pedro_carcha_1609",
+           "name": "SAN PEDRO CARCHÁ"
+          },
+          {
+           "code": "san_juan_chamelco_1610",
+           "name": "SAN JUAN CHAMELCO"
+          },
+          {
+           "code": "lanquin_1611",
+           "name": "LANQUÍN"
+          },
+          {
+           "code": "santa_maria_cahabon_1612",
+           "name": "SANTA MARÍA CAHABÓN"
+          },
+          {
+           "code": "chisec_1613",
+           "name": "CHISEC"
+          },
+          {
+           "code": "chahal_1614",
+           "name": "CHAHAL"
+          },
+          {
+           "code": "fray_bartolome_de_las_casas_161",
+           "name": "FRAY BARTOLOMÉ DE LAS CASAS"
+          },
+          {
+           "code": "santa_catalina_la_tinta_1616",
+           "name": "SANTA CATALINA LA TINTA"
+          },
+          {
+           "code": "raxruha_1617",
+           "name": "RAXRUHÁ"
+          },
+          {
+           "code": "flores_1701",
+           "name": "FLORES"
+          },
+          {
+           "code": "san_jose_1702",
+           "name": "SAN JOSÉ"
+          },
+          {
+           "code": "san_benito_1703",
+           "name": "SAN BENITO"
+          },
+          {
+           "code": "san_andres_1704",
+           "name": "SAN ANDRÉS"
+          },
+          {
+           "code": "la_libertad_1705",
+           "name": "LA LIBERTAD"
+          },
+          {
+           "code": "san_francisco_1706",
+           "name": "SAN FRANCISCO"
+          },
+          {
+           "code": "santa_ana_1707",
+           "name": "SANTA ANA"
+          },
+          {
+           "code": "dolores_1708",
+           "name": "DOLORES"
+          },
+          {
+           "code": "san_luis_1709",
+           "name": "SAN LUIS"
+          },
+          {
+           "code": "sayaxche_1710",
+           "name": "SAYAXCHÉ"
+          },
+          {
+           "code": "melchor_de_mencos_1711",
+           "name": "MELCHOR DE MENCOS"
+          },
+          {
+           "code": "poptun_1712",
+           "name": "POPTÚN"
+          },
+          {
+           "code": "las_cruces_1713",
+           "name": "LAS CRUCES"
+          },
+          {
+           "code": "el_chal_1714",
+           "name": "EL CHAL"
+          },
+          {
+           "code": "puerto_barrios_1801",
+           "name": "PUERTO BARRIOS"
+          },
+          {
+           "code": "livingston_1802",
+           "name": "LIVINGSTON"
+          },
+          {
+           "code": "el_estor_1803",
+           "name": "EL ESTOR"
+          },
+          {
+           "code": "morales_1804",
+           "name": "MORALES"
+          },
+          {
+           "code": "los_amates_1805",
+           "name": "LOS AMATES"
+          },
+          {
+           "code": "zacapa_1901",
+           "name": "ZACAPA"
+          },
+          {
+           "code": "estanzuela_1902",
+           "name": "ESTANZUELA"
+          },
+          {
+           "code": "rio_hondo_1903",
+           "name": "RÍO HONDO"
+          },
+          {
+           "code": "gualan_1904",
+           "name": "GUALÁN"
+          },
+          {
+           "code": "teculutan_1905",
+           "name": "TECULUTÁN"
+          },
+          {
+           "code": "usumatlan_1906",
+           "name": "USUMATLÁN"
+          },
+          {
+           "code": "cabañas_1907",
+           "name": "CABAÑAS"
+          },
+          {
+           "code": "san_diego_1908",
+           "name": "SAN DIEGO"
+          },
+          {
+           "code": "la_union_1909",
+           "name": "LA UNIÓN"
+          },
+          {
+           "code": "huite_1910",
+           "name": "HUITÉ"
+          },
+          {
+           "code": "san_jorge_1911",
+           "name": "SAN JORGE"
+          },
+          {
+           "code": "chiquimula_2001",
+           "name": "CHIQUIMULA"
+          },
+          {
+           "code": "san_jose_la_arada_2002",
+           "name": "SAN JOSÉ LA ARADA"
+          },
+          {
+           "code": "san_juan_ermita_2003",
+           "name": "SAN JUAN ERMITA"
+          },
+          {
+           "code": "jocotan_2004",
+           "name": "JOCOTÁN"
+          },
+          {
+           "code": "camotan_2005",
+           "name": "CAMOTÁN"
+          },
+          {
+           "code": "olopa_2006",
+           "name": "OLOPA"
+          },
+          {
+           "code": "esquipulas_2007",
+           "name": "ESQUIPULAS"
+          },
+          {
+           "code": "concepcion_las_minas_2008",
+           "name": "CONCEPCIÓN LAS MINAS"
+          },
+          {
+           "code": "quezaltepeque_2009",
+           "name": "QUEZALTEPEQUE"
+          },
+          {
+           "code": "san_jacinto_2010",
+           "name": "SAN JACINTO"
+          },
+          {
+           "code": "ipala_2011",
+           "name": "IPALA"
+          },
+          {
+           "code": "jalapa_2101",
+           "name": "JALAPA"
+          },
+          {
+           "code": "san_pedro_pinula_2102",
+           "name": "SAN PEDRO PINULA"
+          },
+          {
+           "code": "san_luis_jilotepeque_2103",
+           "name": "SAN LUIS JILOTEPEQUE"
+          },
+          {
+           "code": "san_manuel_chaparron_2104",
+           "name": "SAN MANUEL CHAPARRÓN"
+          },
+          {
+           "code": "san_carlos_alzatate_2105",
+           "name": "SAN CARLOS ALZATATE"
+          },
+          {
+           "code": "monjas_2106",
+           "name": "MONJAS"
+          },
+          {
+           "code": "mataquescuintla_2107",
+           "name": "MATAQUESCUINTLA"
+          },
+          {
+           "code": "jutiapa_2201",
+           "name": "JUTIAPA"
+          },
+          {
+           "code": "el_progreso_2202",
+           "name": "EL PROGRESO"
+          },
+          {
+           "code": "santa_catarina_mita_2203",
+           "name": "SANTA CATARINA MITA"
+          },
+          {
+           "code": "agua_blanca_2204",
+           "name": "AGUA BLANCA"
+          },
+          {
+           "code": "asuncion_mita_2205",
+           "name": "ASUNCIÓN MITA"
+          },
+          {
+           "code": "yupiltepeque_2206",
+           "name": "YUPILTEPEQUE"
+          },
+          {
+           "code": "atescatempa_2207",
+           "name": "ATESCATEMPA"
+          },
+          {
+           "code": "jerez_2208",
+           "name": "JEREZ"
+          },
+          {
+           "code": "el_adelanto_2209",
+           "name": "EL ADELANTO"
+          },
+          {
+           "code": "zapotitlan_2210",
+           "name": "ZAPOTITLAN"
+          },
+          {
+           "code": "comapa_2211",
+           "name": "COMAPA"
+          },
+          {
+           "code": "jalpatagua_2212",
+           "name": "JALPATAGUA"
+          },
+          {
+           "code": "conguaco_2213",
+           "name": "CONGUACO"
+          },
+          {
+           "code": "moyuta_2214",
+           "name": "MOYUTA"
+          },
+          {
+           "code": "pasaco_2215",
+           "name": "PASACO"
+          },
+          {
+           "code": "san_jose_acatempa_2216",
+           "name": "SAN JOSÉ ACATEMPA"
+          },
+          {
+           "code": "quesada_2217",
+           "name": "QUESADA"
+          }
+         ]
+        },
+        "name": "municipio",
+        "length": 255,
+        "alias": "Municipio",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "aldea_lugar",
+        "length": 255,
+        "alias": "Aldea o Lugar",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "fecha_ultimo_monitoreo",
+        "length": 29,
+        "alias": "Fecha de monitoreo",
+        "type": "esriFieldTypeDate"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "lugares_poblados",
+        "length": 255,
+        "alias": "Nombre del poblado",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "tipos",
+        "length": 255,
+        "alias": "Tipo de lugar",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "hombres_total",
+        "alias": "Hombres",
+        "type": "esriFieldTypeInteger"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "mujeres_total",
+        "alias": "Mujeres",
+        "type": "esriFieldTypeInteger"
+       },
+       {
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "created_user",
+        "length": 255,
+        "alias": "created_user",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "created_date",
+        "length": 29,
+        "alias": "created_date",
+        "type": "esriFieldTypeDate"
+       },
+       {
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "last_edited_user",
+        "length": 255,
+        "alias": "last_edited_user",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "last_edited_date",
+        "length": 29,
+        "alias": "last_edited_date",
+        "type": "esriFieldTypeDate"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "familias_total",
+        "alias": "Familias",
+        "type": "esriFieldTypeInteger"
+       }
+      ],
+      "maxRecordCountFactor": 1,
+      "dateFieldsTimeReference": {
+       "respectsDaylightSaving": false,
+       "timeZone": "UTC"
+      },
+      "supportsFieldDescriptionProperty": true,
+      "hasM": false,
+      "allowGeometryUpdates": true,
+      "useStandardizedQueries": true,
+      "globalIdField": "globalid",
+      "description": "",
+      "syncCanReturnChanges": true,
+      "supportsAsyncDelete": true,
+      "supportedSpatialRelationships": [
+       "esriSpatialRelIntersects",
+       "esriSpatialRelContains",
+       "esriSpatialRelCrosses",
+       "esriSpatialRelEnvelopeIntersects",
+       "esriSpatialRelOverlaps",
+       "esriSpatialRelTouches",
+       "esriSpatialRelWithin"
+      ],
+      "supportsRollbackOnFailureParameter": true,
+      "isDataReplicaTracked": true,
+      "standardMaxRecordCountNoGeometry": 16000,
+      "indexes": [
+       {
+        "name": "r380_sde_rowid_uk",
+        "isUnique": true,
+        "description": "",
+        "fields": "objectid",
+        "isAscending": true
+       },
+       {
+        "name": "uuid_380",
+        "isUnique": true,
+        "description": "",
+        "fields": "globalid",
+        "isAscending": true
+       },
+       {
+        "name": "a180_ix1",
+        "isUnique": false,
+        "description": "",
+        "fields": "shape",
+        "isAscending": true
+       }
+      ],
+      "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+      "editFieldsInfo": {
+       "editDateField": "last_edited_date",
+       "editorField": "last_edited_user",
+       "creationDateField": "created_date",
+       "creatorField": "created_user"
+      },
+      "minScale": 0,
+      "hasAttachments": false,
+      "advancedQueryCapabilities": {
+       "supportsSqlExpression": true,
+       "supportsQueryWithResultType": true,
+       "supportsQueryWithCacheHint": false,
+       "supportsQueryWithDatumTransformation": true,
+       "supportsQueryAttachmentsWithReturnUrl": true,
+       "supportsQueryDateBins": false,
+       "supportsQueryWithLodSR": true,
+       "supportsPaginationOnAggregatedQueries": true,
+       "supportsPagination": true,
+       "supportsMaxRecordCountFactor": true,
+       "supportsStatistics": true,
+       "supportsOrderBy": true,
+       "supportsQueryWithDistance": true,
+       "supportsLod": true,
+       "supportsCountDistinct": true,
+       "supportsQueryAttachments": true,
+       "supportsReturningQueryExtent": true,
+       "supportsQueryAttachmentsCountOnly": true,
+       "supportsOrderByOnlyOnLayerFields": false,
+       "supportsOutFieldSqlExpression": true,
+       "supportsTopFeaturesQuery": true,
+       "supportsDistinct": true,
+       "supportsReturningGeometryCentroid": false,
+       "supportsQueryAnalytic": true,
+       "supportsPercentileStatistics": true,
+       "supportsHavingClause": true
+      },
+      "supportsValidateSQL": true,
+      "allowUpdateWithoutMValues": true,
+      "types": [],
+      "supportsCoordinatesQuantization": true,
+      "capabilities": "Create,Editing,Uploads,Query,Update,Sync",
+      "maxScale": 0,
+      "supportsAppend": true,
+      "supportsExceedsLimitStatistics": true,
+      "sourceSchemaChangesAllowed": true,
+      "defaultVisibility": true,
+      "advancedQueryAnalyticCapabilities": {
+       "supportsAsync": false,
+       "supportsLinearRegression": true,
+       "supportsPercentileAnalytic": false
+      },
+      "hasMetadata": false,
+      "supportedAppendFormats": "shapefile,geojson,csv,featureCollection,excel",
+      "tileMaxRecordCount": 4000,
+      "typeIdField": "",
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "sqlParserVersion": "PG_10.9.1",
+      "drawingInfo": {
+       "renderer": {
+        "symbol": {
+         "yoffset": 0,
+         "imageData": "iVBORw0KGgoAAAANSUhEUgAAAHkAAAB5CAYAAAAd+o5JAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAKEUlEQVR4Xu2dzYodRRTH7yPkEbLIA7jwAeYRJuDCcRAjLkQECSIirhIRN5IMg4KgSBYRFyKMoAiCMmCICyEMIlm4UBGCuBAjKGTh4tq/VFemb99zuqv7dlWdutN/+BNy5976OlSdz65ezJhRBvYPz1fcqXil4o2KxzWXA+h/c1CRdnYqnq97mJEcpwJFKPcrSkKbirRPP07wMyJh//BcxUsVjxZPHfxT/SsJIw1d/0cVGc+5eoQzRsMLVlpsO3QCnzEATr+iF2Mfw1OT8TLuWY+rQN/tXbtZL9g4PvPecvHch8vFCx8vFy9+sly89Nly8fKX/bz8ufs+v+P3tCO1H0o3j1l/P8ITbz1eLchQS9gRgSAcBPXa8XLx+rfTkfZol/bpR+q/n8cP53dm4Y5l3B1pcWSyw9htLL4kmNikX/ofvtOZ5xk7xp07EqZzn353uXj+5nLxylfywuci42FcjE8a9zqZ75V6BbYYHF17139sTV7ms+87nTr1MTw1GR/jDN3dzH9rj/Anr70pTrpN9F+u43hTMu5Q/c16bA0uXr1QTepkbZJtlizcNsOFffJwfYrG/uFuxW7di07juJMWq3Qyr36dzfrs1itWGJxxJU3qlFiq1nXupmR+zFOa/yoLM8r6XCOMlG05mkPJfPuNsxv1ChoGAfu967daA18lbse2716NzJv5S+vi6dbPaOLDZYp0A2ubde9Q9utq1tGYoEMEbCSYcf7t78XPk5P1KEbQfQImqGHoeD7+5W/x8yxkXVgfad0cjQi6SwcbE/DuR3eXgH+lv2dhn6BZ36zosqIxMKRJZSS7GJjazZ7dBlkmq7vLDzYoYHRxE2Z0c5Pdgk7sR7tIljQQd/RIE8jMg9v3avE68H/pe9nZraMTRcZcLFoOVRrTwZ7n3vhuef/Bf7V4Hfg/n0vfz8puHX0/Taxbs6RxBwwKGF769KdatKvgc+n72ck66u7VSS2JSNDShYb8YIm//vWgFusq+Fz6vgl2+dHR0pSuFkvu1HAky7tNGnY++EH8nQmyrtJ6wyiFB1pFh0FLuknvNmkw6U41qVncyGNSaO4SWRWjehi23SYNJt0pT9ZXz15N5Fa5qkrZmjaeLrxx549ajN3ge9LvzZB1ltbfyWWCKlAtqkUiXBqQEeIehcKsO9WkXniwYTRMM7YMu0ueV775rRZhGPi+1I4ZdrlVGxlh2pMNBeSF28GPPph2pzx1a/u4lthAuGeA1xukClEagCFqwY8+mA2ONKlXgY549kp7+KyA2iwt+NGHInazZoQhr0FwFvV6QwXsYoIbm8B0cMRT380DLG33nO16IwXs4r7gRx/MB0eg7lId1BIMgOQX45BLHRriY+/cqUW1GWhHat8U5QDJ/VqCPXBXOKw3UIBFHRr86IP54AjULe2Aqy2kOzrwz6SODDE0hBkK06FOqPvNR7UkFbjKy/UfGk9CwKl2sUcRu1kvF+qo8NSOasO5YihVfmyKIkKdyEWSV+eRLR3VBRhcQ0OYoTAf6oSyAdZxZEsXoRWQiJh6F3sUm7hAjiK0MKZx3zjWLvYwv5t1n1kIc2qFAVLDhjg2hBmKIkKdktzEggIp42Q8jDk2ETEU5hMXcphTyExJUS4uKpMaNcLYu9jD/G5GTm3ZrUW/tISEYX2cahd7mN7Nul5uJCw0o8to9QcWb6pd7GHa0kZOkvxWjC/J6DLsH8e2qDWYtrRlf7lhfEmpRaNGFzHlWH5xH+jXbExbNr4aqUfJsjYaBDm6+2e95HlA/9K4slOu5mxY2JKQDVrWm1Z9TAWT1SOyhb0i5PUvcNG31FhGpja2NDAOc0aYll9+BOmPxtynXMaWBnNGmOZGPYL0R0NCzmlsdcGUEVa6kDctzosFU0V/JQu57/ni3DBzXdQoIb/6tdxYYloxtjSYMcJK3cnWjC0NJoywEoVs1diSYCISVqKQp66+jI3s1Z2lCZldUSKy7uZRQs74xERpu9gj624OiHiZiV2Xuos9su3mgNi1mSxUqbvYI9tuDshCrV/+kiGfjL9ZikWtgfFn8ZsD8skmKkNS123FQpZ6sIDKkJ3WHx0T13jlLgiYCslj2oE1XtmrNTnitglJj2zNfVq7XiJz3bWVqo+pkLR6RLashVsHJAs7ofFVSpw6FEnj2bLRJT5BkfVZqFnIG1CS24rR5aEZX4n08izkkdT1sXJ5W8bnk2chj6QUBFGfTwYZbxqYhTySsn/ccdNAxjtDZiGP4Mg7Q7Ld/mO9lmsoktR+jbr9B0hHdoL7rUvPPrURPRuFPEbd4wW0IztBfrn05IQH85DmNyk3upEPSNGvBK/nKz3N6JEk3SgbXIF3a4JMt+TOWahA6r7xoFtys913vQ35ZGlek1IOY8KBb5bJdHP9XBnSQ20XD765Hmhhzsi7ea7x6qG+i0e8gwJImSkY2dIudTdH38W6RS1knEKR6b1QJdZ6Md6ohQK6XzzByzkzveHt8hc/18tXBhivNI/JKFdjwg3f8Aacpb3uN8PIRpjV55LbiF7TpbtMyGWCdzUCraAAh/yMH9tJjmk58AEneuuqR6b3J/NmF6uCZlzR3zyjJSEmf38y0IwwGNnathoJix7Z0q3pSG9CB7xLX+oQqy9yztmaoKMLmPXUrGnkEBX7hydrncLIbhW0cHTTf/Ry2y53ifWPjotXL1QdydY2maoEgj75/d96ydOCfqPrYNaPdZTWl3Vn/ZNg/3C31fkpE6QksWYPbt+rlz4N6C+qFe2pCxju1hJIBM2tggnKhSDHZuxdTfvJnobQy3ngxO5SKLRoGEwkaIgRNPVVULQX3bhqslvAE0S1NsHe9VvCoBwT6OgmKZ7b9MlIfp/0ArZuHYw/fKte6YxwFZ6yxQ0TCxqiOxEUerQvNMrf+R7fT6Jzm+wTsFvXnsrLVOgTdAI/OoQIEf2aXJgSu/xgR0MC9ggRdOTIWDFkHYoTsAcD69LREAMj8fFthsy728ByOtisgJvosrohWZXIaUpzZL56NskzsxU9FF1+tCeJ8G3f1cxPT/g3mckP3hQuMiaHQD23WVf3617I+iSOZE0NF+vWDTJPqhC35QhnHt2ukedJulh0CmhpyjZLFjbj1ktmVxk9XZgLJLq1CpM2MVI47qzrbMbHOPuNKkfmHy3hbwnOKOvW1Z7oNNwOA8GUFTIextWvcz2Zb6HG1Vi4KtBuV6tNdguWaq7jnH7pP3TXnpJ5TlRVWSJc7Zj8pEYf0X9cVMbiT32s0x7t0n6onl3n8dk4mkPBszzaQ3ahZIchEHYbwkFXIqg+8j2+z+/4/fCduko3j5HPJp0FuGOc56PDdLYdMl7GfYaP5TFwV1us32Fii4wv8AqHGTpchssJXLpQLiVd/06wRSQSSoV7dho3DIMt9rFO+/RDf7OezQanx3dqQaAXEcpQi93/ht87gc76dUYZWCz+BxCYZVvISuZ7AAAAAElFTkSuQmCC",
+         "xoffset": 0,
+         "width": 9.75,
+         "angle": 0,
+         "type": "esriPMS",
+         "contentType": "image/png",
+         "url": "https://sig.inab.gob.gt/portal/portalimages/Symbols/Government/Hydrostatic-Permit.png",
+         "height": 9.75
+        },
+        "description": "Survey Data Locations",
+        "label": "Registro y Monitoreo de Fuentes de Agua",
+        "type": "simple"
+       },
+       "transparency": 0
+      },
+      "copyrightText": "",
+      "geometryType": "esriGeometryPoint"
+     },
+     {
+      "extent": {
+       "ymin": -90,
+       "xmin": -180,
+       "ymax": 90,
+       "xmax": 180,
+       "spatialReference": {"wkid": 4326},
+       "type": "extent"
+      },
+      "supportsApplyEditsWithGlobalIds": true,
+      "maxRecordCount": 5000,
+      "infoInEstimates": [
+       "extent",
+       "count"
+      ],
+      "type": "Feature Layer",
+      "hasStaticData": false,
+      "syncEnabled": true,
+      "supportsAttachmentsByUploadId": true,
+      "relationships": [
+       {
+        "keyField": "parentglobalid",
+        "role": "esriRelRoleDestination",
+        "composite": true,
+        "name": "Registro_y_Monitoreo_de_Fuentes_de_Agua_usuarios_fuente",
+        "relatedTableId": 0,
+        "id": 0,
+        "cardinality": "esriRelCardinalityOneToMany"
+       }
+      ],
+      "hasViews": true,
+      "supportsAttachmentsResizing": true,
+      "id": 1,
+      "supportsStatistics": true,
+      "supportedExportFormats": "sqlite,filegdb",
+      "standardMaxRecordCount": 16000,
+      "isDataVersioned": false,
+      "templates": [
+       {
+        "name": "New Feature",
+        "description": "",
+        "prototype": {
+         "symbol": null,
+         "_constructed": true,
+         "attributes": {}
+        }
+       }
+      ],
+      "hasGeometryProperties": true,
+      "supportsAdvancedQueries": true,
+      "currentVersion": 10.91,
+      "hasZ": false,
+      "advancedEditingCapabilities": {
+       "supportsAsyncApplyEdits": false,
+       "supportedSqlFormatsInCalculate": [
+        "standard"
+       ]
+      },
+      "objectIdField": "objectid",
+      "supportsQuantizationEditMode": true,
+      "name": "usuarios_fuente",
+      "displayField": "objectid",
+      "supportsCalculate": true,
+      "fields": [
+       {
+        "nullable": false,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "objectid",
+        "length": 4,
+        "alias": "ObjectID",
+        "type": "esriFieldTypeOID"
+       },
+       {
+        "nullable": false,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "globalid",
+        "length": 38,
+        "alias": "GlobalID",
+        "type": "esriFieldTypeGlobalID"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "lugar_poblado",
+        "length": 255,
+        "alias": "Nombre del poblado",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": {
+         "name": "service_5f6461b9f167413b8a5964c1b54d34db_cvd_tipo_poblado",
+         "type": "codedValue",
+         "codedValues": [
+          {
+           "code": "cabecera_departamental",
+           "name": "Cabecera departamental"
+          },
+          {
+           "code": "cabecera_municipal",
+           "name": "Cabecera municipal"
+          },
+          {
+           "code": "aldea",
+           "name": "Aldea"
+          },
+          {
+           "code": "caserio",
+           "name": "Caserío"
+          }
+         ]
+        },
+        "name": "tipo_poblado",
+        "length": 255,
+        "alias": "Tipo de poblado",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "hombres",
+        "alias": "Hombres",
+        "type": "esriFieldTypeInteger"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "mujeres",
+        "alias": "Mujeres",
+        "type": "esriFieldTypeInteger"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "parentglobalid",
+        "length": 38,
+        "alias": "ParentGlobalID",
+        "type": "esriFieldTypeGUID"
+       },
+       {
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "created_user",
+        "length": 255,
+        "alias": "created_user",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "created_date",
+        "length": 29,
+        "alias": "created_date",
+        "type": "esriFieldTypeDate"
+       },
+       {
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "last_edited_user",
+        "length": 255,
+        "alias": "last_edited_user",
+        "type": "esriFieldTypeString"
+       },
+       {
+        "nullable": true,
+        "editable": false,
+        "defaultValue": null,
+        "domain": null,
+        "name": "last_edited_date",
+        "length": 29,
+        "alias": "last_edited_date",
+        "type": "esriFieldTypeDate"
+       },
+       {
+        "nullable": true,
+        "editable": true,
+        "defaultValue": null,
+        "domain": null,
+        "name": "familias",
+        "alias": "Familias beneficiadas",
+        "type": "esriFieldTypeInteger"
+       }
+      ],
+      "maxRecordCountFactor": 1,
+      "dateFieldsTimeReference": {
+       "respectsDaylightSaving": false,
+       "timeZone": "UTC"
+      },
+      "supportsFieldDescriptionProperty": true,
+      "hasM": false,
+      "allowGeometryUpdates": true,
+      "useStandardizedQueries": true,
+      "globalIdField": "globalid",
+      "description": "",
+      "syncCanReturnChanges": true,
+      "supportsAsyncDelete": true,
+      "supportedSpatialRelationships": [
+       "esriSpatialRelIntersects",
+       "esriSpatialRelContains",
+       "esriSpatialRelCrosses",
+       "esriSpatialRelEnvelopeIntersects",
+       "esriSpatialRelOverlaps",
+       "esriSpatialRelTouches",
+       "esriSpatialRelWithin"
+      ],
+      "supportsRollbackOnFailureParameter": true,
+      "isDataReplicaTracked": true,
+      "standardMaxRecordCountNoGeometry": 16000,
+      "indexes": [
+       {
+        "name": "r381_sde_rowid_uk",
+        "isUnique": true,
+        "description": "",
+        "fields": "objectid",
+        "isAscending": true
+       },
+       {
+        "name": "uuid_381",
+        "isUnique": true,
+        "description": "",
+        "fields": "globalid",
+        "isAscending": true
+       },
+       {
+        "name": "a181_ix1",
+        "isUnique": false,
+        "description": "",
+        "fields": "shape",
+        "isAscending": true
+       }
+      ],
+      "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+      "editFieldsInfo": {
+       "editDateField": "last_edited_date",
+       "editorField": "last_edited_user",
+       "creationDateField": "created_date",
+       "creatorField": "created_user"
+      },
+      "minScale": 0,
+      "hasAttachments": false,
+      "advancedQueryCapabilities": {
+       "supportsSqlExpression": true,
+       "supportsQueryWithResultType": true,
+       "supportsQueryWithCacheHint": false,
+       "supportsQueryWithDatumTransformation": true,
+       "supportsQueryAttachmentsWithReturnUrl": true,
+       "supportsQueryDateBins": false,
+       "supportsQueryWithLodSR": true,
+       "supportsPaginationOnAggregatedQueries": true,
+       "supportsPagination": true,
+       "supportsMaxRecordCountFactor": true,
+       "supportsStatistics": true,
+       "supportsOrderBy": true,
+       "supportsQueryWithDistance": true,
+       "supportsLod": true,
+       "supportsCountDistinct": true,
+       "supportsQueryAttachments": true,
+       "supportsReturningQueryExtent": true,
+       "supportsQueryAttachmentsCountOnly": true,
+       "supportsOrderByOnlyOnLayerFields": false,
+       "supportsOutFieldSqlExpression": true,
+       "supportsTopFeaturesQuery": true,
+       "supportsDistinct": true,
+       "supportsReturningGeometryCentroid": false,
+       "supportsQueryAnalytic": true,
+       "supportsPercentileStatistics": true,
+       "supportsHavingClause": true
+      },
+      "supportsValidateSQL": true,
+      "allowUpdateWithoutMValues": true,
+      "types": [],
+      "supportsCoordinatesQuantization": true,
+      "capabilities": "Create,Editing,Uploads,Query,Update,Sync",
+      "maxScale": 0,
+      "supportsAppend": true,
+      "supportsExceedsLimitStatistics": true,
+      "sourceSchemaChangesAllowed": true,
+      "defaultVisibility": true,
+      "advancedQueryAnalyticCapabilities": {
+       "supportsAsync": false,
+       "supportsLinearRegression": true,
+       "supportsPercentileAnalytic": false
+      },
+      "hasMetadata": false,
+      "supportedAppendFormats": "shapefile,geojson,csv,featureCollection,excel",
+      "tileMaxRecordCount": 4000,
+      "typeIdField": "",
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "sqlParserVersion": "PG_10.9.1",
+      "drawingInfo": {
+       "renderer": {
+        "symbol": {
+         "outline": {
+          "color": [
+           255,
+           255,
+           0,
+           255
+          ],
+          "width": 1,
+          "style": "esriSLSSolid",
+          "type": "esriSLS"
+         },
+         "color": [
+          255,
+          0,
+          0,
+          255
+         ],
+         "size": 5.25,
+         "yoffset": 0,
+         "xoffset": 0,
+         "angle": 0,
+         "style": "esriSMSCircle",
+         "type": "esriSMS"
+        },
+        "description": "Survey Data Locations",
+        "label": "Registro y Monitoreo de Fuentes de Agua",
+        "type": "simple"
+       },
+       "transparency": 0
+      },
+      "copyrightText": "",
+      "geometryType": "esriGeometryPoint"
+     }
+    ]
+   }
